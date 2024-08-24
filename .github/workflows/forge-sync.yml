@@ -14,6 +14,6 @@ jobs:
         fetch-depth: 0
     - uses: wangchucheng/git-repo-sync@v0.1.0
       with:
-        target-url: https://forge.apps.education.fr/nuit-du-code/www.nuiducode.net
+        target-url: https://forge.apps.education.fr/jfrl/www.jfrl.org
         target-username: laurent.abbal
-        target-token: ${{ secrets.FORGE_SYNC_TOKEN }}
+        target-token: ${{ secrets.FORGE_EDU_SYNC_TOKEN }}
