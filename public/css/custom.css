@@ -10,15 +10,16 @@ body {
 }
 
 a {
-    color: #9966ff;
+    color: #2a80b9;
     text-decoration: none;
     background-color: transparent;
 }
 
 a:hover {
-    color: #8E44AD;
-    text-decoration: none;
+    color: #2a80b9;
     background-color: transparent;
+    text-decoration: underline dotted;
+    text-decoration-color: silver;
 }
 
 
