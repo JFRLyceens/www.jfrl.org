@@ -73,6 +73,8 @@
 				<a href="https://www.sciencescope.org/" target="_blank"><img src="{{ asset('img/logo-sciencescope.png') }}" height="60" class="pl-2 pr-2" /></a>
 				<a href="https://www.lfitokyo.org/" target="_blank"><img src="{{ asset('img/logo-lfit.png') }}" height="60" class="pl-2 pr-2" /></a>
 				<a href="https://www.aefe.fr/" target="_blank"><img src="{{ asset('img/logo-aefe-zap.png') }}" height="80" class="pl-3 pr-2" /></a>
+				<a href="https://www.aefe.fr/" target="_blank"><img src="{{ asset('img/logo-cnrs.png') }}" height="70" class="pl-3 pr-2" /></a>
+				<a href="https://www.aefe.fr/" target="_blank"><img src="{{ asset('img/logo-ambassade.jpg') }}" height="80" class="pl-3 pr-2" /></a>
 			</div>
 		</div><!-- row -->
 
