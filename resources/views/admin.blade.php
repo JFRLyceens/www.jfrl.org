@@ -107,6 +107,46 @@ if (Auth::user()->is_admin != 1) {
             </div>
         </div><!-- /row -->
 
+        <div class="row">
+            <div class="col-md-12 text-monospace">
+
+                <div class="mt-5 font-weight-bold">PRÉSENTATIONS</div>
+
+                @foreach($etablissements AS $etablissement)
+
+                    @php
+                        $presentations = App\Models\Presentation::where([['user_id', $etablissement->id]])->get();
+                    @endphp
+
+                    <div class="mt-3">{{$etablissement->prenom}} {{$etablissement->nom}} - {{$etablissement->etablissement}}</div>
+
+                    @if($presentations->isNotEmpty())
+                        
+                        @foreach($presentations as $presentation)
+
+                            <div class="mt-1 border rounded p-3 text-monospace bg-white small">
+                                <div class="font-weight-bold text-uppercase">{{$presentation->title}}</div>
+                                <div class="mt-2"><b>Type</b>: {{$presentation->type}}</div>
+                                <div class="mt-2"><b>Format</b>: {{$presentation->format}}</div>
+                                <div class="mt-3 font-weight-bold">Résumé</div>
+                                <div>{{$presentation->abstract}}</div>
+                                <div class="mt-3 font-weight-bold">Documents</div>
+                                <ul>
+                                @foreach(json_decode($presentation->documents) as $document)
+                                    <li><a href="/storage/presentations/{{str_pad(Auth::id(), 3, '0', STR_PAD_LEFT)}}/{{$document}}" download>{{$document}}</a></li>
+                                @endforeach
+                                </ul>
+                            </div>                       
+
+
+                        @endforeach
+                    @else
+                    <div class="mt-1 border rounded p-3 text-monospace bg-white small">pas de présentation déposée</div>
+                    @endif
+                @endforeach
+            </div>
+        </div>
+
 	</div><!-- /container -->
 
 	@include('inc-bottom-js')

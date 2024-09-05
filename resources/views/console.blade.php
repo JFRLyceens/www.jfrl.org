@@ -32,38 +32,46 @@
 			<div class="col-md-10">
 	
 				<?php
-				$presentation = App\Models\Presentation::where('user_id', Auth::id())->first();
+				$presentations = App\Models\Presentation::where('user_id', Auth::id())->get();
 				?>
 
-				@if($presentation)
+				@if($presentations->isNotEmpty())
 
-					<div class="text-monospace font-weight-bold">PRESENTATION</div>
-					<div class="border rounded p-3 text-monospace bg-white">
-						<div class="h3 text-uppercase">{{$presentation->title}}</div>
-						<div class="mt-2"><b>Type</b>: {{$presentation->type}}</div>
-						<div class="mt-3 font-weight-bold">Résumé</div>
-						<div>{{$presentation->abstract}}</div>
-						<div class="mt-3 font-weight-bold">Documents</div>
-						<ul>
-						@foreach(json_decode($presentation->documents) as $document)
-							<li><a href="/storage/presentations/{{str_pad(Auth::id(), 3, '0', STR_PAD_LEFT)}}/{{$document}}" download>{{$document}}</a></li>
-						@endforeach
-						</ul>
-
-						<div class="text-right mt-2" style="float:right;" data-toggle="tooltip" title="Pour mettre à jour votre présentation, vous devez la supprimer et la déposer à nouveau.">
-							<button class="btn btn-dark btn-sm text-light" type="button" data-toggle="collapse" data-target="#collapse_900" aria-expanded="true" aria-controls="collapse_900">supprimer & redéposer</button>
-							<div class="collapse" id="collapse_900" style="">
-								<a href="/console/supprimer-presentation/{{ Crypt::encryptString($presentation->id) }}" class="mt-2 btn btn-danger btn-sm text-white" role="button">confirmer</a>
-								<a class="mt-2 btn btn-light btn-sm text-dark" data-toggle="collapse" href="#collapse_900" role="button" aria-expanded="true" aria-controls="collapseExample"><i class="fa-solid fa-xmark"></i></a>
-							</div>
-						</div>
-						<br  style="clear:both;"/>
-
+					<div class="text-center text-monospace">
+						<a class="btn btn-dark" href="/console/presentation-deposer" role="button"><i class="fas fa-file-download"></i> déposer une autre présentation</a>
 					</div>
 
+					@foreach($presentations as $presentation)
+
+						<div class="mt-4 border rounded p-3 text-monospace bg-white">
+							<div class="h3 text-uppercase">{{$presentation->title}}</div>
+							<div class="mt-2"><b>Type</b>: {{$presentation->type}}</div>
+							<div class="mt-2"><b>Format</b>: {{$presentation->format}}</div>
+							<div class="mt-3 font-weight-bold">Résumé</div>
+							<div>{{$presentation->abstract}}</div>
+							<div class="mt-3 font-weight-bold">Documents</div>
+							<ul>
+							@foreach(json_decode($presentation->documents) as $document)
+								<li><a href="/storage/presentations/{{str_pad(Auth::id(), 3, '0', STR_PAD_LEFT)}}/{{$document}}" download>{{$document}}</a></li>
+							@endforeach
+							</ul>
+
+							<div class="text-right mt-2" style="float:right;">
+								<button class="btn btn-dark btn-sm text-light" type="button" data-toggle="collapse" data-target="#collapse_900" aria-expanded="true" aria-controls="collapse_900">supprimer</button>
+								<div class="collapse" id="collapse_900" style="">
+									<a href="/console/presentation-supprimer/{{ Crypt::encryptString($presentation->id) }}" class="mt-2 btn btn-danger btn-sm text-white" role="button">confirmer</a>
+									<a class="mt-2 btn btn-light btn-sm text-dark" data-toggle="collapse" href="#collapse_900" role="button" aria-expanded="true" aria-controls="collapseExample"><i class="fa-solid fa-xmark"></i></a>
+								</div>
+							</div>
+							<br  style="clear:both;"/>
+
+						</div>
+
+					@endforeach
+
 				@else
-					<div class="text-center mt-5 text-monospace">
-						<a class="btn btn-dark" href="/console/depot-presentation" role="button"><i class="fas fa-file-download"></i> déposer une présentation</a>
+					<div class="text-center text-monospace">
+						<a class="btn btn-dark" href="/console/presentation-deposer" role="button"><i class="fas fa-file-download"></i> déposer une présentation</a>
 					</div>
 				@endif
 

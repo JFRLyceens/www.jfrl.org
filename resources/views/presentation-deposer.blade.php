@@ -10,63 +10,78 @@ header("Pragma: no-cache");
     @include('inc-meta')
     <link href="{{ asset('css/dropzone-basic.css') }}" rel="stylesheet">
     <link href="{{ asset('css/dropzone.css') }}" rel="stylesheet">
-    <title>Dépôt presentation</title>
+    <title>Dépôt présentation</title>
 </head>
 <body>
 
-    @include('inc-nav')
-
-	<div class="container mb-5">
+	<div class="container pt-5 mb-5">
 		<div class="row">
 
-			<div class="col-md-8 offset-md-2">
+            <div class="col-md-2">
+                <a class="btn btn-light btn-sm mb-4" href="/console" role="button"><i class="fas fa-arrow-left"></i></a>
+            </div>
 
-                @if (session('message'))
-                    <div class="text-success text-monospace text-center mt-5 pb-4" role="alert">
-                        {{ session('message') }}
-                        <br />
-                        <a class="btn btn-light btn-sm mt-3" href="/" role="button"><i class="fas fa-arrow-left"></i></a>
-                    </div>
-                    @php
-                    exit;
-                    @endphp
-                @endif		
+			<div class="col-md-10">
 
-                <form id="python_submit" method="POST" action="{{ route('depot-presentation-post') }}" enctype="multipart/form-data">
+                <h1 class="mt-0">PRÉSENTATION</h1>
+
+                <form id="python_submit" method="POST" action="{{ route('presentation-deposer-post') }}" enctype="multipart/form-data">
 
 					@csrf
 
                     <div class="form-group">
-						<div for="title" class="text-info">TITRE DE LA PRÉSENTATION <sup class="text-danger">*</sup></div>
+						<div for="title" class="text-info">TITRE <sup class="text-danger">*</sup></div>
                         <div class="text-monospace text-muted small mb-1">60 caractères maximum, sans caractères spéciaux</div>
 						<input id="title" name="title" type="text" class="form-control" autofocus>
                         <div id="error_title" class="mt-1 text-danger text-monospace small" role="alert">&nbsp;</div>
 					</div>
 
+                    <!-- TYPE -->
                     <div class="form-group">
-                        <div class="text-info mt-2">TYPE <sup class="text-danger">*</sup></div>
+                        <div class="text-info">TYPE <sup class="text-danger">*</sup></div>
                         <div>
                             <div class="custom-control custom-radio">
-                                <input class="custom-control-input" type="radio" name="type" id="presentation_orale" value="presentation_orale">
-                                <label class="custom-control-label" for="presentation_orale">Présentation orale</label>
+                                <input class="custom-control-input" type="radio" name="type" id="presentiel" value="presentiel">
+                                <label class="custom-control-label" for="presentiel">Présentiel</label>
                             </div>
                             <div class="custom-control custom-radio">
-                                <input class="custom-control-input" type="radio" name="type" id="poster" value="poster">
-                                <label class="custom-control-label" for="poster">Poster</label>
+                                <input class="custom-control-input" type="radio" name="type" id="distanciel" value="distanciel">
+                                <label class="custom-control-label" for="distanciel">Distanciel</label>
                             </div>
                         </div>
                         <div id="error_type" class="mt-1 text-danger text-monospace small" role="alert">&nbsp;</div>
                     </div> 
 
+                    <!-- FORMAT -->
                     <div class="form-group">
-                        <div class="text-info mt-2">RESUMÉ <sup class="text-danger">*</sup></div>
+                        <div class="text-info">FORMAT <sup class="text-danger">*</sup></div>
+                        <div>
+                            <div class="custom-control custom-radio">
+                                <input class="custom-control-input" type="radio" name="format" id="court" value="court">
+                                <label class="custom-control-label" for="court">Court (5 minutes)</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input class="custom-control-input" type="radio" name="format" id="long" value="long">
+                                <label class="custom-control-label" for="long">Long (20 minutes) - 2 ou 3 intervenants</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input class="custom-control-input" type="radio" name="format" id="poster" value="poster">
+                                <label class="custom-control-label" for="poster">Poster</label>
+                            </div>
+                        </div>
+                        <div id="error_format" class="mt-1 text-danger text-monospace small" role="alert">&nbsp;</div>
+                    </div> 
+
+                    <!-- RESUME -->
+                    <div class="form-group">
+                        <div class="text-info">RESUMÉ <sup class="text-danger">*</sup></div>
                         <div class="text-monospace text-muted small mb-1">200 caractères minimum</div>
                         <textarea class="form-control" id="abstract" name="abstract" rows="8" required></textarea>
                         <div id="error_abstract" class="mt-1 text-danger text-monospace small" role="alert">&nbsp;</div>      
                     </div>          
 
-                    <!-- dropzone field -->
-                    <div class="text-info mt-2">DOCUMENTS <sup class="text-danger">*</sup></div>
+                    <!-- DOCUMENTS -->
+                    <div class="text-info">DOCUMENTS <sup class="text-danger">*</sup></div>
                     <div class="text-monospace text-muted small">Poster, présentation détaillée des travaux, transcription...</div>
                     <div class="text-monospace text-muted small mb-1">Quatre documents maximum de moins de 50 Mo chacun - Formats autorisés: pdf, odt, odp, svg</div>
                     <div id="formdropzone" class="dropzone"></div>
@@ -90,7 +105,7 @@ header("Pragma: no-cache");
         // init dropzone on id (form or div)
         document.addEventListener("DOMContentLoaded", function() {
             var formdropzone = new Dropzone("#formdropzone", {
-                url: "{{ route('depot-presentation-post') }}",
+                url: "{{ route('presentation-deposer-post') }}",
                 paramName: "documents",
                 autoProcessQueue: false,
                 uploadMultiple: true, // uplaod files in a single request
@@ -126,6 +141,7 @@ header("Pragma: no-cache");
                     document.getElementById('title').classList.remove('is-invalid');
                     document.getElementById('error_title').innerHTML = "&nbsp;";
                     document.getElementById('error_type').innerHTML = "&nbsp;";
+                    document.getElementById('error_format').innerHTML = "&nbsp;";
                     document.getElementById('abstract').classList.remove('is-invalid');
                     document.getElementById('error_abstract').innerHTML = "&nbsp;";
                     document.getElementById('formdropzone').style.borderColor = '#2980b9';
@@ -138,7 +154,9 @@ header("Pragma: no-cache");
                     } else if (regex.test(document.getElementById('title').value) == false) {
                         document.getElementById('error_title').innerHTML = "caratères autorisés: lettres, chiffres, -, _ et espaces";
                     } else if (!document.querySelector('input[name="type"]:checked')) {
-                        document.getElementById('error_type').innerHTML = "une catégorie doit être choisie";
+                        document.getElementById('error_type').innerHTML = "faire un choix";
+                    } else if (!document.querySelector('input[name="format"]:checked')) {
+                        document.getElementById('error_format').innerHTML = "faire un choix"; 
                     } else if (document.getElementById('abstract').value.length < 200) {
                         document.getElementById('abstract').classList.add('is-invalid');
                         document.getElementById('error_abstract').innerHTML = "champ obligatoire (200 caractères minimum)";
@@ -165,11 +183,12 @@ header("Pragma: no-cache");
                 this.on("sendingmultiple", function(data, xhr, formData) {
                     formData.append("title", document.getElementById("title").value);
                     formData.append("type", document.querySelector('input[name="type"]:checked').value);
+                    formData.append("format", document.querySelector('input[name="format"]:checked').value);
                     formData.append("abstract", document.getElementById("abstract").value);
                 });
                 this.on("successmultiple", function(files, response) {
                     console.log('success sending');
-                    console.log('success: '+response);
+                    console.log('success: '+JSON.stringify(response));
                     window.location = "/console";
                 });
                 this.on("errormultiple", function(files, response) {
