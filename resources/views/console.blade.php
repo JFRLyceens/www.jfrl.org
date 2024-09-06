@@ -57,10 +57,10 @@
 							</ul>
 
 							<div class="text-right mt-2" style="float:right;">
-								<button class="btn btn-dark btn-sm text-light" type="button" data-toggle="collapse" data-target="#collapse_900" aria-expanded="true" aria-controls="collapse_900">supprimer</button>
-								<div class="collapse" id="collapse_900" style="">
+								<button class="btn btn-dark btn-sm text-light" type="button" data-toggle="collapse" data-target="#collapse_delete_{{ $loop->iteration }}" aria-expanded="true" aria-controls="collapse_delete_{{ $loop->iteration }}">supprimer</button>
+								<div class="collapse" id="collapse_delete_{{ $loop->iteration }}" style="">
 									<a href="/console/presentation-supprimer/{{ Crypt::encryptString($presentation->id) }}" class="mt-2 btn btn-danger btn-sm text-white" role="button">confirmer</a>
-									<a class="mt-2 btn btn-light btn-sm text-dark" data-toggle="collapse" href="#collapse_900" role="button" aria-expanded="true" aria-controls="collapseExample"><i class="fa-solid fa-xmark"></i></a>
+									<a class="mt-2 btn btn-light btn-sm text-dark" data-toggle="collapse" href="#collapse_delete_{{ $loop->iteration }}" role="button" aria-expanded="true" aria-controls="collapse_delete_{{ $loop->iteration }}"><i class="fa-solid fa-xmark"></i></a>
 								</div>
 							</div>
 							<br  style="clear:both;"/>
