@@ -36,6 +36,21 @@ header("Pragma: no-cache");
                         <div id="error_title" class="mt-1 text-danger text-monospace small" role="alert">&nbsp;</div>
 					</div>
 
+                    <div class="form-group">
+						<div for="nb_intervenants" class="text-info">NOMBRE D'INTERVENANTS <sup class="text-danger">*</sup></div>
+                        <select id="nb_intervenants" name="nb_intervenants" class="custom-select" style="width:80px">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                        </select>
+                        <div>&nbsp;</div>
+					</div>
+
                     <!-- TYPE -->
                     <div class="form-group">
                         <div class="text-info">TYPE <sup class="text-danger">*</sup></div>
@@ -182,6 +197,7 @@ header("Pragma: no-cache");
                 //send all the form data along with the files:
                 this.on("sendingmultiple", function(data, xhr, formData) {
                     formData.append("title", document.getElementById("title").value);
+                    formData.append("nb_intervenants", document.getElementById("nb_intervenants").value);
                     formData.append("type", document.querySelector('input[name="type"]:checked').value);
                     formData.append("format", document.querySelector('input[name="format"]:checked').value);
                     formData.append("abstract", document.getElementById("abstract").value);

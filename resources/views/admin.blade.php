@@ -125,7 +125,7 @@ if (Auth::user()->is_admin != 1) {
                         @foreach($presentations as $presentation)
 
                             <div class="mt-1 border rounded p-3 text-monospace bg-white small">
-                                <div class="font-weight-bold text-uppercase">{{$presentation->title}}</div>
+                                <div class="font-weight-bold text-uppercase text-primary">{{$presentation->title}}</div>
                                 <div class="mt-2"><b>Type</b>: {{$presentation->type}}</div>
                                 <div class="mt-2"><b>Format</b>: {{$presentation->format}}</div>
                                 <div class="mt-3 font-weight-bold">Résumé</div>
