@@ -79,7 +79,9 @@ if (Auth::user()->is_admin != 1) {
                                 <th scope="col">Prénom</th>
                                 <th scope="col">Nom</th>
                                 <th scope="col">Établissement</th>
-                                <th scope="col">Nb élèves</th>
+                                <th scope="col">Visio</th>
+                                <th scope="col">Dist.</th>
+                                <th scope="col">Prés.</th>
                                 <th scope="col">Ac. / zone</th>
                                 <th scope="col">Pays</th>
                                 <th scope="col">Ville</th>
@@ -94,7 +96,9 @@ if (Auth::user()->is_admin != 1) {
                                 <td>{{$etablissement->prenom}}</td>
                                 <td>{{$etablissement->nom}}</td>
                                 <td>{{$etablissement->etablissement}}</td>
-                                <td>{{$etablissement->nb_participants}}</td>
+                                <td>{{$etablissement->nb_visio}}</td>
+                                <td>{{$etablissement->nb_distanciel}}</td>
+                                <td>{{$etablissement->nb_presentiel}}</td>
                                 <td>{{$etablissement->ac_zone}}</td>
                                 <td>{{$etablissement->pays}}</td>
                                 <td>{{$etablissement->ville}}</td>
@@ -126,9 +130,10 @@ if (Auth::user()->is_admin != 1) {
 
                             <div class="mt-1 border rounded p-3 text-monospace bg-white small">
                                 <div class="font-weight-bold text-uppercase text-primary">{{$presentation->title}}</div>
-                                <div class="mt-2"><b>Type</b>: {{$presentation->type}}</div>
-                                <div class="mt-2"><b>Format</b>: {{$presentation->format}}</div>
-                                <div class="mt-3 font-weight-bold">Résumé</div>
+                                <div class="mt-1"><b>Nombre d'intervenants</b>: {{$presentation->nb_intervenants}}</div>
+                                <div class="mt-1"><b>Type</b>: {{$presentation->type}}</div>
+                                <div class="mt-1"><b>Format</b>: {{$presentation->format}}</div>
+                                <div class="mt-1 font-weight-bold">Résumé</div>
                                 <div>{{$presentation->abstract}}</div>
                                 <div class="mt-3 font-weight-bold">Documents</div>
                                 <ul>
