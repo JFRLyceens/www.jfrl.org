@@ -124,28 +124,58 @@
 							@foreach($presentations as $presentation)
 
 								<div class="mt-4 border rounded p-3 text-monospace bg-white">
+
+									<!-- delete -->
+									<div class="text-right" style="float:right">
+										<button id="presentation_delete_button_{{ $loop->iteration }}" onclick="showConfirm('presentation_delete_button_{{ $loop->iteration }}', 'presentation_delete_confirm_{{ $loop->iteration }}')" class="btn btn-light btn-sm text-dark" type="button" data-toggle="tooltip" data-placement="left" title="supprimer cette présentation"><i class="fas fa-trash fa-sm"></i></button>
+										<span id="presentation_delete_confirm_{{ $loop->iteration }}" style="display:none">
+											<a href="/console/presentation-supprimer/{{ Crypt::encryptString($presentation->id) }}" class="btn btn-danger btn-sm text-white" role="button">confirmer</a>
+											<button id="presentation_delete_cancel_{{ $loop->iteration }}" onclick="hideConfirm('presentation_delete_button_{{ $loop->iteration }}', 'presentation_delete_confirm_{{ $loop->iteration }}')" class="btn btn-light btn-sm text-dark" type="button" data-toggle="tooltip" data-placement="top" title="annuler"><i class="fa-solid fa-xmark"></i></button>
+											<span class="pl-2 pr-2"><i class="fas fa-chevron-left"></i></span>
+										</span>
+									</div>
+
 									<div class="font-weight-bold text-uppercase text-primary">{{$presentation->title}}</div>
-									<div class="mt-2"><b>Nombre d'intervenants</b>: {{$presentation->nb_intervenants}}</div>
 									<div class="mt-1"><b>Type</b>: {{$presentation->type}}</div>
 									<div class="mt-1"><b>Format</b>: {{$presentation->format}}</div>
+									<div class="mt-2"><b>Nombre d'intervenants</b>: {{$presentation->nb_intervenants}}</div>
+									<div class="mt-1 font-weight-bold">Intervenants</div>
+									<div>{{$presentation->intervenants}}</div>
+									<div class="mt-1 font-weight-bold">Encadrants</div>
+									<div>{{$presentation->encadrants}}</div>
 									<div class="mt-1 font-weight-bold">Résumé</div>
 									<div>{{$presentation->abstract}}</div>
+									
+									@php
+										$directory  = storage_path('app/public/presentations/'.str_pad(Auth::id(), 3, '0', STR_PAD_LEFT).'/'.$presentation->jeton);
+										$documents = File::files($directory );
+									@endphp
+
+									@if (!empty($documents))
+									<!-- DOCUMENTS -->
 									<div class="mt-3 font-weight-bold">Documents</div>
-									<ul>
-									@foreach(json_decode($presentation->documents) as $document)
-										<li><a href="/storage/presentations/{{str_pad(Auth::id(), 3, '0', STR_PAD_LEFT)}}/{{$document}}" download>{{$document}}</a></li>
-									@endforeach
-									</ul>
+									<div class="list-group text-monospace mt-2 mb-2">
+										@foreach($documents as $document)
+											<li class="list-group-item p-1">
+												<a class="pl-2 align-middle" href="/storage/presentations/{{str_pad(Auth::id(), 3, '0', STR_PAD_LEFT)}}/{{$document->getFilename()}}" download>{{$document->getFilename()}}</a>
+												<!-- delete document -->
+												<div class="text-right" style="float:right;">
+													<button id="delete_button_{{ $presentation->id}}_{{ $loop->iteration }}" onclick="showConfirm('delete_button_{{ $presentation->id}}_{{ $loop->iteration }}', 'delete_confirm_{{ $presentation->id}}_{{ $loop->iteration }}')" class="btn btn-light btn-sm text-dark" type="button" data-toggle="tooltip" data-placement="left" title="supprimer ce document"><i class="fas fa-trash fa-sm"></i></button>
+													<span id="delete_confirm_{{ $presentation->id}}_{{ $loop->iteration }}" style="display:none">
+														<a href="/console/document-supprimer/{{ Crypt::encryptString($directory.'/'.$document->getFilename()) }}" class="btn btn-danger btn-sm text-white" role="button">confirmer</a>
+														<button id="delete_cancel_{{ $presentation->id}}_{{ $loop->iteration }}" onclick="hideConfirm('delete_button_{{ $presentation->id}}_{{ $loop->iteration }}', 'delete_confirm_{{ $presentation->id}}_{{ $loop->iteration }}')" class="btn btn-light btn-sm text-dark" type="button" data-toggle="tooltip" data-placement="top" title="annuler"><i class="fa-solid fa-xmark"></i></button>
+														<span class="pl-2 pr-2"><i class="fas fa-chevron-left"></i></span>
+													</span>
+												</div>
 
-									<div class="text-right mt-2" style="float:right;">
-										<button class="btn btn-dark btn-sm text-light" type="button" data-toggle="collapse" data-target="#collapse_delete_{{ $loop->iteration }}" aria-expanded="true" aria-controls="collapse_delete_{{ $loop->iteration }}">supprimer</button>
-										<div class="collapse" id="collapse_delete_{{ $loop->iteration }}" style="">
-											<a href="/console/presentation-supprimer/{{ Crypt::encryptString($presentation->id) }}" class="mt-2 btn btn-danger btn-sm text-white" role="button">confirmer</a>
-											<a class="mt-2 btn btn-light btn-sm text-dark" data-toggle="collapse" href="#collapse_delete_{{ $loop->iteration }}" role="button" aria-expanded="true" aria-controls="collapse_delete_{{ $loop->iteration }}"><i class="fa-solid fa-xmark"></i></a>
-										</div>
+											</li>
+										@endforeach
+									</div>  
+									@endif 
+
+									<div class="text-center mt-4">
+										<a href="/console/presentation-modifier/{{ Crypt::encryptString($presentation->id) }}" class="btn btn-light btn-sm" role="button">modifier</a>
 									</div>
-									<br  style="clear:both;"/>
-
 								</div>
 
 							@endforeach
@@ -164,6 +194,20 @@
 	</div><!-- /container -->
 
 	@include('inc-bottom-js')
+
+	<script>
+	function showConfirm(buttonId, confirmId) {
+		// Cacher le bouton delete_button et afficher delete_confirm
+		document.getElementById(buttonId).style.display = 'none';
+		document.getElementById(confirmId).style.display = 'inline';
+	}
+
+	function hideConfirm(buttonId, confirmId) {
+		// Cacher delete_confirm et réafficher delete_button
+		document.getElementById(confirmId).style.display = 'none';
+		document.getElementById(buttonId).style.display = 'inline';
+	}
+	</script>
 
 </body>
 </html>
