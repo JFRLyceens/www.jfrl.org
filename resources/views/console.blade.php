@@ -113,7 +113,7 @@
     			</div>
 
 
-				<div class="row pt-5 mb-5">
+				<div class="row mb-5">
                     <div class="col-md-12">
 						@if($presentations->isNotEmpty())
 
