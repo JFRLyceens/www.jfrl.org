@@ -147,8 +147,11 @@
 									<div>{{$presentation->abstract}}</div>
 									
 									@php
-										$directory  = storage_path('app/public/presentations/'.str_pad(Auth::id(), 3, '0', STR_PAD_LEFT).'/'.$presentation->jeton);
-										$documents = File::files($directory );
+										$directory = storage_path('app/public/presentations/'.str_pad(Auth::id(), 3, '0', STR_PAD_LEFT).'/'.$presentation->jeton);
+										$documents = [];
+										if (File::exists($directory)) {
+											$documents = File::files($directory);
+										}
 									@endphp
 
 									@if (!empty($documents))

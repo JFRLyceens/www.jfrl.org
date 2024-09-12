@@ -126,9 +126,13 @@ $presentation = App\Models\Presentation::where([['user_id', Auth::id()], ['id', 
                     @if(isset($presentation))
 
                         @php
-                            $directory  = storage_path('app/public/presentations/'.str_pad(Auth::id(), 3, '0', STR_PAD_LEFT).'/'.$presentation->jeton);
-                            $documents = File::files($directory );
-                            $nb_documents = count($documents);
+                            $directory = storage_path('app/public/presentations/'.str_pad(Auth::id(), 3, '0', STR_PAD_LEFT).'/'.$presentation->jeton);
+                            $documents = [];
+                            $nb_documents = 0;
+                            if (File::exists($directory)) {
+                                $documents = File::files($directory);
+                                $nb_documents = count($documents);
+                            }
                         @endphp
 
                         @if (!empty($documents))
