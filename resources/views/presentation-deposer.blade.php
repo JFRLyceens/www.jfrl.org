@@ -119,7 +119,10 @@ $presentation = App\Models\Presentation::where([['user_id', Auth::id()], ['id', 
                     </div>          
 
                     <!-- DOCUMENTS -->
-                    <div class="text-info">DOCUMENTS <sup class="text-danger">*</sup></div>
+                    <div class="text-info">DOCUMENTS</div>
+                    @if(!isset($presentation))
+                    <div class="text-monospace text-muted small font-italic">Vous pouvez ajouter des documents plus tard</div>
+                    @endif
                     <div class="text-monospace text-muted small">Poster, présentation détaillée des travaux, transcription, autorisation parentale d'enregistrement et d'utilisation de l'image/la voix...</div>
                     <div class="text-monospace text-muted small mb-1">Douze documents maximum de moins de 20 Mo chacun - Formats autorisés: pdf, odt, docx, svg</div>
                     
@@ -256,7 +259,6 @@ $presentation = App\Models\Presentation::where([['user_id', Auth::id()], ['id', 
                         if (dz.files.length === 0) {
                             // No files added, submit the form data without files
                             document.getElementById('presentation_form').submit();
-                            //window.location = "/console";
                         } else {
                             // Si des fichiers sont présents, uploader avec Dropzone
                             dz.processQueue();
@@ -281,7 +283,7 @@ $presentation = App\Models\Presentation::where([['user_id', Auth::id()], ['id', 
                     formData.append("intervenants", document.getElementById("intervenants").value);
                     formData.append("encadrants", document.getElementById("encadrants").value);
                     formData.append("abstract", document.getElementById("abstract").value);
-                    formData.append("presentation_id", document.getElementById("presentation_id").value);
+                    @if(isset($presentation)) formData.append("presentation_id", document.getElementById("presentation_id").value); @endif
                 });
                 this.on("successmultiple", function(files, response) {
                     console.log('success sending');
