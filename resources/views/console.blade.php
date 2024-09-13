@@ -60,8 +60,6 @@
 					</div>
 				</div>
 
-
-
 				<div class="row mb-5">
 					<div class="col-md-10 offset-md-1">
                         <table class="table table-borderless table-sm text-muted" style="width:0">
@@ -87,17 +85,6 @@
 
     				</div>
     			</div>
-
-
-
-
-
-
-
-		
-
-
-
 
 				<div class="row mb-5">
                     <div class="col-md-12">
@@ -156,7 +143,6 @@
 														<span class="pl-2 pr-2"><i class="fas fa-chevron-left"></i></span>
 													</span>
 												</div>
-
 											</li>
 										@endforeach
 									</div>  

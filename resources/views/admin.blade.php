@@ -136,11 +136,27 @@ if (Auth::user()->is_admin != 1) {
                                 <div class="mt-1 font-weight-bold">Résumé</div>
                                 <div>{{$presentation->abstract}}</div>
                                 <div class="mt-3 font-weight-bold">Documents</div>
-                                <ul>
-                                @foreach(json_decode($presentation->documents) as $document)
-                                    <li><a href="/storage/presentations/{{str_pad(Auth::id(), 3, '0', STR_PAD_LEFT)}}/{{$document}}" download>{{$document}}</a></li>
-                                @endforeach
-                                </ul>
+
+                                @php
+                                    $directory = storage_path('app/public/presentations/'.str_pad(Auth::id(), 3, '0', STR_PAD_LEFT).'/'.$presentation->jeton);
+                                    $documents = [];
+                                    if (File::exists($directory)) {
+                                        $documents = File::files($directory);
+                                    }
+                                @endphp
+
+                                @if (!empty($documents))
+                                <!-- DOCUMENTS -->
+                                <div class="mt-3 font-weight-bold">Documents</div>
+                                <div class="list-group text-monospace mt-2 mb-2">
+                                    @foreach($documents as $document)
+                                        <li class="list-group-item p-1">
+                                            <a class="pl-2 align-middle" href="{{asset('/storage/presentations/'.str_pad(Auth::id(), 3, '0', STR_PAD_LEFT).'/'.$presentation->jeton.'/'.$document->getFilename())}}" download>{{$document->getFilename()}}</a>
+                                        </li>
+                                    @endforeach
+                                </div>  
+                                @endif 
+
                             </div>                       
 
 
