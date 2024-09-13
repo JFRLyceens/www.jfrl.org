@@ -215,7 +215,7 @@ $presentation = App\Models\Presentation::where([['user_id', Auth::id()], ['id', 
                     e.preventDefault();
                     e.stopPropagation();
 
-                    var regex = /^[a-zA-Z0-9\-_ ]+$/;
+                    var regex = /^[\p{L}0-9\s\-_.,!?()@#&%$'"]+$/u;
 
                     // initialisation messages erreur
                     document.getElementById('title').classList.remove('is-invalid');
@@ -237,7 +237,7 @@ $presentation = App\Models\Presentation::where([['user_id', Auth::id()], ['id', 
                     } else if (document.getElementById('title').value.length > 60) {
                         document.getElementById('error_title').innerHTML = "pas plus de 60 caratères";
                     } else if (regex.test(document.getElementById('title').value) == false) {
-                        document.getElementById('error_title').innerHTML = "caratères autorisés: lettres, chiffres, -, _ et espaces";
+                        document.getElementById('error_title').innerHTML = "caratères spéciaux non autorisés";
                     } else if (!document.querySelector('input[name="type"]:checked')) {
                         document.getElementById('error_type').innerHTML = "faire un choix";
                     } else if (!document.querySelector('input[name="format"]:checked')) {
