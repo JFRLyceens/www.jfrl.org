@@ -95,7 +95,7 @@ $presentation = App\Models\Presentation::where([['user_id', Auth::id()], ['id', 
                     <div class="form-group">
                         <div class="text-info">INTERVENANTS <sup class="text-danger">*</sup></div>
                         <div class="text-monospace text-muted small">Par ligne: Nom, Prénom, Age, Niveau (seconde, première ou terminale)</div>
-                        <div class="text-monospace text-danger small mb-1">Pour chaque intervenant mineur, déposer une "Autorisation parentale d'enregistrement et d'utilisation
+                        <div class="text-monospace text-success small mb-1">Pour chaque intervenant mineur, déposer une "Autorisation parentale d'enregistrement et d'utilisation
                         de l'image/la voix'.</div>
                         <textarea class="form-control" id="intervenants" name="intervenants" rows="4" required>@if(isset($presentation)){{$presentation->intervenants}}@endif</textarea>
                         <div id="error_intervenants" class="mt-1 text-danger text-monospace small" role="alert">&nbsp;</div>      
