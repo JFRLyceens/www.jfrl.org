@@ -80,7 +80,7 @@
                             <tr>
 								<td nowrap>Nombre d'élèves qui feront une présentation en présentiel</td>
 								<td>:</td>
-								<td class="text-success text-monospace font-weight-bold" nowrap>{{ Auth::user()->nb_distanciel }}</td>
+								<td class="text-success text-monospace font-weight-bold" nowrap>{{ Auth::user()->nb_presentiel }}</td>
 							</tr>	
                         </table>
 
