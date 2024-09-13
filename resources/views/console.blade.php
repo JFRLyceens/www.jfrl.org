@@ -40,77 +40,63 @@
 				$presentations = App\Models\Presentation::where('user_id', Auth::id())->get();
 				?>
 
-				<div class="row mb-5">
-                    <div class="col-md-12">
-                        <table class="table table-borderless table-sm text-muted" style="width:0" align="center">
+				<div class="row mb-3">
+                    <div class="col-md-10 offset-md-1">
+                        <table class="table table-sm table-borderless text-muted" style="width:0">
                             <tr>
                                 <td class="text-center"><i class="fas fa-address-card"></i></td>
                                 <td nowrap>{{ Auth::user()->prenom }} {{ Auth::user()->nom }}</td>
-                                <td class="text-center"><i class="fas fa-school ml-5"></i></td>
+                                <td class="text-center"><i class="fas fa-school ml-3"></i></td>
 								<td>{{ Auth::user()->ville }}</td>
-								<td></td>
+								<td rowspan="2" class="text-right align-middle"><a class="ml-4 btn btn-sm btn-light" href="{{ route('fiche-inscription-modifier_get') }}" data-toggle="tooltip" data-placement="top" title="modifier ces informations" role="button"><i class="fas fa-pen"></i></a></td>	
                             </tr>
                             <tr>
 								<td class="text-center"><i class="fas fa-city"></i></td>
                                 <td nowrap>{{ Auth::user()->etablissement }}</td>
-                                <td class="text-center"><i class="fas fa-globe-americas ml-5"></i></td>
+                                <td class="text-center"><i class="fas fa-globe-americas ml-3"></i></td>
                                 <td>{{ Auth::user()->pays }}</td>
-								<td></td>
+                            </tr>	
+                        </table>
+					</div>
+				</div>
+
+
+
+				<div class="row mb-5">
+					<div class="col-md-10 offset-md-1">
+                        <table class="table table-borderless table-sm text-muted" style="width:0">
+                            <tr>
+                                <td nowrap>Nombre d'élèves qui suivront la JFRL en visioconférence</td>
+                                <td>:</td>
+                                <td class="text-success text-monospace font-weight-bold" nowrap>{{ Auth::user()->nb_visio }}</td>
+								<td rowspan="4" class="text-right align-middle"><a class="ml-4 btn btn-sm btn-light" href="{{ route('fiche-inscription-modifier_get') }}" data-toggle="tooltip" data-placement="top" title="modifier ces informations" role="button"><i class="fas fa-pen"></i></a></td>
+                            </tr>
+                            <tr>
+								<td nowrap>Nombre d'élèves qui feront une présentation en distanciel</td>
+								<td>:</td>
+                                <td class="text-success text-monospace font-weight-bold" nowrap>{{ Auth::user()->nb_distanciel }}</td>
                             </tr>
 
                             <tr>
-								<td class="text-center pt-3">
-									@if (Auth::user()->nb_visio > 0)
-										<i class="far fa-check-square fa-lg"></i>
-									@else
-										<i class="far fa-square fa-lg"></i>
-									@endif
-								</td>
-								<td colspan="3" class="pt-3">
-									suivi de la JFRL en visioconférence
-									@if (Auth::user()->nb_visio > 0)
-										<span class="text-monospace text-muted small ml-2 font-italic">[{{Auth::user()->nb_visio}} élèves]</span>
-									@endif
-								</td>
-								<td>
-									<a class="ml-5 btn btn-sm btn-dark" href="{{ route('fiche-inscription-modifier_get') }}" data-toggle="tooltip" data-placement="top" title="modifier ces informations" role="button"><i class="fas fa-pen"></i></a>
-								</td>
-							</tr>
-                            <tr>
-								<td class="text-center">
-									@if (Auth::user()->nb_distanciel > 0)
-										<i class="far fa-check-square fa-lg"></i>
-									@else
-										<i class="far fa-square fa-lg"></i>
-									@endif
-								</td>
-								<td colspan="3">
-									présentation en distanciel
-									@if (Auth::user()->nb_distanciel > 0)
-										<span class="text-monospace text-muted small ml-2 font-italic">[{{Auth::user()->nb_distanciel}} élèves]</span>
-									@endif
-								</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td class="text-center">
-									@if (Auth::user()->nb_presentiel > 0)
-										<i class="far fa-check-square fa-lg"></i>
-									@else
-										<i class="far fa-square fa-lg"></i>
-									@endif
-								</td>
-								<td colspan="3">
-									présentation en présentiel
-									@if (Auth::user()->nb_presentiel > 0)
-										<span class="text-monospace text-muted small ml-2 font-italic">[{{Auth::user()->nb_presentiel}} élèves]</span>
-									@endif
-								</td>
-								<td></td>
-							</tr>		
+								<td nowrap>Nombre d'élèves qui feront une présentation en présentiel</td>
+								<td>:</td>
+								<td class="text-success text-monospace font-weight-bold" nowrap>{{ Auth::user()->nb_distanciel }}</td>
+							</tr>	
                         </table>
+
+
     				</div>
     			</div>
+
+
+
+
+
+
+
+		
+
+
 
 
 				<div class="row mb-5">
