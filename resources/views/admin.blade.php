@@ -135,7 +135,6 @@ if (Auth::user()->is_admin != 1) {
                                 <div class="mt-1"><b>Format</b>: {{$presentation->format}}</div>
                                 <div class="mt-1 font-weight-bold">Résumé</div>
                                 <div>{{$presentation->abstract}}</div>
-                                <div class="mt-3 font-weight-bold">Documents</div>
 
                                 @php
                                     $directory = storage_path('app/public/presentations/'.str_pad(Auth::id(), 3, '0', STR_PAD_LEFT).'/'.$presentation->jeton);
@@ -158,7 +157,6 @@ if (Auth::user()->is_admin != 1) {
                                 @endif 
 
                             </div>                       
-
 
                         @endforeach
                     @else
