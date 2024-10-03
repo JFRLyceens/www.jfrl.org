@@ -36,7 +36,7 @@ $presentation = App\Models\Presentation::where([['user_id', Auth::id()], ['id', 
                     <!-- TITRE -->
                     <div class="form-group">
 						<div for="title" class="text-info">TITRE <sup class="text-danger">*</sup></div>
-                        <div class="text-monospace text-muted small mb-1">60 caractères maximum, sans caractères spéciaux</div>
+                        <div class="text-monospace text-muted small mb-1">160 caractères maximum, sans caractères spéciaux</div>
 						<input id="title" name="title" type="text" class="form-control" @if(isset($presentation)) value="{{$presentation->title}}" @endif autofocus>
                         <div id="error_title" class="mt-1 text-danger text-monospace small" role="alert">&nbsp;</div>
 					</div>
@@ -113,7 +113,7 @@ $presentation = App\Models\Presentation::where([['user_id', Auth::id()], ['id', 
                     <!-- RESUME -->
                     <div class="form-group">
                         <div class="text-info">RESUMÉ <sup class="text-danger">*</sup></div>
-                        <div class="text-monospace text-muted small mb-1">200 caractères minimum</div>
+                        <div class="text-monospace text-muted small mb-1">80 caractères minimum</div>
                         <textarea class="form-control" id="abstract" name="abstract" rows="10" required>@if(isset($presentation)) {{$presentation->abstract}} @endif</textarea>
                         <div id="error_abstract" class="mt-1 text-danger text-monospace small" role="alert">&nbsp;</div>      
                     </div>          
@@ -248,9 +248,9 @@ $presentation = App\Models\Presentation::where([['user_id', Auth::id()], ['id', 
                     } else if (document.getElementById('encadrants').value.length < 1) {
                         document.getElementById('encadrants').classList.add('is-invalid');
                         document.getElementById('error_encadrants').innerHTML = "champ obligatoire";
-                    } else if (document.getElementById('abstract').value.length < 200) {
+                    } else if (document.getElementById('abstract').value.length < 80) {
                         document.getElementById('abstract').classList.add('is-invalid');
-                        document.getElementById('error_abstract').innerHTML = "champ obligatoire (200 caractères minimum)";
+                        document.getElementById('error_abstract').innerHTML = "champ obligatoire (80 caractères minimum)";
                     } else if (document.getElementById('abstract').value.length > 2000) {
                         document.getElementById('abstract').classList.add('is-invalid');
                         document.getElementById('error_abstract').innerHTML = "champ obligatoire (2000 caractères maximum)";                         

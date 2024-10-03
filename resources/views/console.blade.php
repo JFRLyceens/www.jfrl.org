@@ -90,7 +90,7 @@
                     <div class="col-md-10 offset-md-1">
 					CALENDRIER
 					<ul>
-					<li><b class="text-monospace text-danger">8 novembre</b> : fin des dépôts des propositions de présentations (présentation courte, longue, poster)</li>
+					<li><b class="text-monospace text-danger">8 novembre</b> : fin des dépôts des propositions de présentations (poster, présentation courte ou longue)</li>
 					<li><b class="text-monospace">du 8 au 22 novembre</b> : étude des dossiers</li>
 					<li><b class="text-monospace">25 novembre</b> : publication du programme de la JFRL 2024</li>
 					<li><b class="text-monospace text-primary">13 décembre</b> : JFRL 2024</li>
