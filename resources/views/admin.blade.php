@@ -53,7 +53,7 @@ if (Auth::user()->is_admin != 1) {
 
         <div class="row">
             <div class="col-md-12">
-                <a class="" data-toggle="collapse" href="#etablissements_sans_validation_email" role="button" aria-expanded="false" aria-controls="etablissements_sans_validation_email"><i class="fas fa-plus-square"></i></a> Énseignants sans validation d'email : {{$etablissements_sans_validation_email->count()}}
+                <a class="" data-toggle="collapse" href="#etablissements_sans_validation_email" role="button" aria-expanded="false" aria-controls="etablissements_sans_validation_email"><i class="fas fa-plus-square"></i></a> Enseignants sans validation d'email : {{$etablissements_sans_validation_email->count()}}
                 <div class="p-3 mb-3 text-monospace small text-muted collapse" id="etablissements_sans_validation_email" style="background-color:white;border:1px silver solid;border-radius:4px;">
                     @php
                     foreach($etablissements_sans_validation_email AS $etablissement){
@@ -66,7 +66,7 @@ if (Auth::user()->is_admin != 1) {
     
         <div class="row">
             <div class="col-md-12">
-                <a class="" data-toggle="collapse" href="#etablissements_inscrits" role="button" aria-expanded="false" aria-controls="etablissements_inscrits"><i class="fas fa-plus-square"></i></a> Énseignants inscrits : {{ App\Models\User::where([['is_orga', '!=', 1]])->count(); }}
+                <a class="" data-toggle="collapse" href="#etablissements_inscrits" role="button" aria-expanded="false" aria-controls="etablissements_inscrits"><i class="fas fa-plus-square"></i></a> Enseignants inscrits : {{ App\Models\User::where([['is_orga', '!=', 1]])->count(); }}
                 <div class="col-md-12 p-3 text-monospace small text-muted collapse" id="etablissements_inscrits" style="background-color:white;border:1px silver solid;border-radius:4px;">
                     @php
                     foreach($etablissements AS $etablissement){
