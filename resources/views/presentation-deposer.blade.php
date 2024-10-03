@@ -234,8 +234,8 @@ $presentation = App\Models\Presentation::where([['user_id', Auth::id()], ['id', 
                     if (document.getElementById('title').value.length < 3) {
                         document.getElementById('title').classList.add('is-invalid');
                         document.getElementById('error_title').innerHTML = "trois caratères minimum";
-                    } else if (document.getElementById('title').value.length > 60) {
-                        document.getElementById('error_title').innerHTML = "pas plus de 60 caratères";
+                    } else if (document.getElementById('title').value.length > 160) {
+                        document.getElementById('error_title').innerHTML = "pas plus de 160 caratères";
                     } else if (regex.test(document.getElementById('title').value) == false) {
                         document.getElementById('error_title').innerHTML = "caratères spéciaux non autorisés";
                     } else if (!document.querySelector('input[name="type"]:checked')) {
