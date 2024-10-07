@@ -59,33 +59,104 @@
 			<div class="col-md-10 offset-md-1" style="font-family: 'Latin Modern Roman', serif;font-size:20px;text-align:justify;">
 				<p>Depuis 2017, le <a href="https://www.lfitokyo.org/" target="_blank">Lycée Français International de Tokyo</a> participe à la <a href="https://www.sciencescope.org/events-2/jfr/jfr2023/" target="_blank">Journée Francophone de la Recherche (JFR)</a> organisée depuis bientôt trois décennies par <a href="https://www.sciencescope.org/" target="_blank">Sciencescope</a>, l'association des étudiants et chercheurs francophones au Japon, avec le soutien de l'<a href="http://www.ambafrance-jp.org/" target="_blank">Ambassade de France</a>, du <a href="https://tokyo.cnrs.fr/" target="_blank">CNRS</a> et de l'<a href="http://www.mfj.gr.jp/" target="_blank">Institut Français de Recherches sur le Japon - Maison Franco-Japonaise (IFRJ-MFJ)</a>. L'expérience de ces dernières années ayant été concluante, il a été décidé d'organiser, avec le soutien de l'<a href="https://www.aefe.fr/" target="_blank">AEFE</a>, une Journée Francophone de la Recherche des Lycéen(ne)s, ouverte à tous les lycées français de la zone Asie-Pacifique, le 13 décembre 2024. Cette première édition aura lieu à Tokyo.
 				</p>
-				L'idée est d'offrir à des lycéens la possibilité :
+				Le but est d'offrir à des lycéens la possibilité :
 				<ul>
 					<li>d'assister à des communications</li>
 					<li>de présenter à l'oral et/ou sous forme de poster un travail de recherche solide qu'ils auront mené avec l'aide de leurs enseignants et éventuellement de chercheurs confirmés.</li>
 				</ul>
-				Le financement du projet permettra à des équipes de venir à Tokyo pour cette journée (selon des conditions qui sont encore à définir).
-				<div class="mt-3">
-					CALENDRIER
+
+				<div class="pt-1 pb-4 text-center text-monospace">
+					<a class="btn btn-light" href="/presentation_JFRL.pdf" role="button" data-toggle="tooltip" data-placement="top" title="Télécharger la présentation de la JFRL au format PDF."><svg xmlns="http://www.w3.org/2000/svg" height="14" width="14" viewBox="0 0 512 512"><path d="M256 0a256 256 0 1 0 0 512A256 256 0 1 0 256 0zM244.7 395.3l-112-112c-4.6-4.6-5.9-11.5-3.5-17.4s8.3-9.9 14.8-9.9l64 0 0-96c0-17.7 14.3-32 32-32l32 0c17.7 0 32 14.3 32 32l0 96 64 0c6.5 0 12.3 3.9 14.8 9.9s1.1 12.9-3.5 17.4l-112 112c-6.2 6.2-16.4 6.2-22.6 0z"/></svg> PRESENTATION DE LA JFRL</a>
+				</div>
+
+				<div class="pt-3 text-center">
+						<a href="https://www.sciencescope.org/" target="_blank"><img src="{{ asset('img/logo-sciencescope.png') }}" height="60" class="pl-2 pr-2" /></a>
+						<a href="https://www.lfitokyo.org/" target="_blank"><img src="{{ asset('img/logo-lfit.png') }}" height="60" class="pl-2 pr-2" /></a>
+						<a href="https://www.aefe.fr/" target="_blank"><img src="{{ asset('img/logo-aefe-zap.png') }}" height="80" class="pl-3 pr-2" /></a>
+						<a href="https://www.aefe.fr/" target="_blank"><img src="{{ asset('img/logo-cnrs.png') }}" height="70" class="pl-3 pr-2" /></a>
+						<a href="https://www.aefe.fr/" target="_blank"><img src="{{ asset('img/logo-ambassade.jpg') }}" height="80" class="pl-3 pr-2" /></a>
+				</div>
+
+				<div class="pt-5">
+					<div class="font-weight-bold" style="color:#E3342F">CALENDRIER</div>
 					<ul>
-						<li><b class="text-monospace text-danger">8 novembre</b> : fin des dépôts des propositions de présentations (poster, présentation courte ou longue)</li>
+						<li><b class="text-monospace text-success">8 novembre</b> : fin des dépôts des propositions de présentations (poster, présentation courte ou longue)</li>
 						<li><b class="text-monospace">du 8 au 22 novembre</b> : étude des dossiers</li>
 						<li><b class="text-monospace">25 novembre</b> : publication du programme de la JFRL 2024</li>
 						<li><b class="text-monospace text-primary">13 décembre</b> : JFRL 2024</li>
 					</ul>
 				</div>
+
+				<div class="pt-3">
+					<div class="font-weight-bold" style="color:#E3342F">AXES PÉDAGOGIQUES</div>
+					<div class="font-weight-bold">JFRL et Grand Oral</div>
+					<div>
+						La Journée Francophone de la Recherche des Lycéen(ne)s (JFRL) offre une opportunité unique de préparer le Grand Oral du baccalauréat. Les élèves ont l'occasion de développer leurs compétences oratoires en présentant des sujets complexes devant un public, améliorant ainsi leur aisance à l'oral, leur capacité à structurer un discours scientifique, et leur gestion du temps lors de la présentation. Les échanges avec les enseignants et chercheurs leur permettent de perfectionner leur argumentation et leur capacité à répondre aux questions de manière rigoureuse et précise, compétences clés pour réussir le Grand Oral.
+					</div>
+					<div class="mt-3 font-weight-bold">JFRL et Parcoursup</div>
+					<div>
+						La participation à la JFRL constitue un atout dans le cadre de Parcoursup. Les lycéens qui présentent un travail de recherche solide et bien structuré montrent ainsi leur intérêt pour les études supérieures, leur capacité à mener un projet de long terme et leur ouverture à la recherche scientifique. Cet engagement peut être mis en valeur dans les dossiers de candidature, particulièrement pour les formations où la méthodologie de recherche est valorisée (sciences, ingénierie, lettres, ou sciences sociales).
+					</div>
+					<div class="mt-3 font-weight-bold">JFRL et Orientation</div>
+					<div>
+						La JFRL permet aux élèves d'aborder des champs disciplinaires variés et de les étudier de manière approfondie. Mener à terme un projet de recherche, en lien avec un domaine spécifique (sciences, littérature, histoire, technologie, etc.), peut les aider à affiner leurs choix d'orientation post-bac. Cette immersion dans le monde académique offre également un aperçu concret des métiers liés à l'enseignement, à la recherche, à la médecine, ou encore à l'ingénierie.
+					</div>
+					<div class="mt-3 font-weight-bold">JFRL et travail en équipe</div>
+					<div>
+						La participation à la JFRL offre aux élèves l'occasion de renforcer leurs compétences en travail d'équipe. En collaborant sur un projet de recherche, ils apprennent à s'organiser, à communiquer, à partager les responsabilités et à résoudre des problèmes à plusieurs. Ce travail collaboratif prépare les élèves aux exigences des études supérieures, où la capacité à travailler en équipe est essentielle pour mener à bien des projets complexes.
+					</div>
+
+					<div class="mt-5 font-weight-bold" style="color:#E3342F">PRÉPARATION DES PROJETS DE RECHERCHE</div>
+					<div>
+						Le cadre méthodologique dans lequel s'inscrit la préparation des projets pour la JFRL permet aux élèves d'acquérir des compétences dans plusieurs domaines.
+					</div>
+					<div class="mt-3 font-weight-bold">Choix du sujet</div>
+					<div>
+						Les élèves, en collaboration avec leurs enseignants, doivent identifier un sujet de recherche dans leur champ d'intérêt. Le sujet doit être à la fois suffisamment spécifique pour susciter un intérêt académique tout en restant abordable pour des lycéens.
+					</div>
+					<div class="mt-3 font-weight-bold">Recherche bibliographique</div>
+					<div>
+						Une fois le sujet défini, les élèves doivent effectuer une recherche bibliographique afin de rassembler les informations et les sources nécessaires pour approfondir leur compréhension du sujet.
+					</div>
+					<div class="mt-3 font-weight-bold">Encadrement et collaboration avec des chercheurs</div>
+					<div>
+						Les élèves seront amenés à travailler en collaboration avec des enseignants ou des chercheurs. Ils pourront les solliciter afin de préciser leur problématique, choisir des méthodes adaptées et bénéficier de leur expertise  dans les étapes de l'expérimentation ou de l'analyse.
+					</div>
+					<div class="mt-3 font-weight-bold">Mise en place de la méthodologie de recherche</div>
+					<div>
+						Les projets doivent suivre une méthodologie scientifique rigoureuse. Selon le sujet, cela peut inclure :
+						<ul>
+							<li>La formulation d'une hypothèse de départ.</li>
+							<li>L'élaboration d'une stratégie expérimentale ou d'une approche théorique pour tester cette hypothèse.</li>
+							<li>La collecte de données à partir de sources primaires (expériences, enquêtes) ou secondaires (analyses d'articles scientifiques, ouvrages).</li>
+						</ul>
+					</div>
+					<div class="mt-3 font-weight-bold">Rédaction et préparation des supports de présentation</div>
+					<div>
+						Les élèves doivent ensuite préparer le texte de leur intervention orale ou un poster scientifique en respectant les formats académiques (introduction, méthodologie, résultats, discussion). La clarté et la concision sont essentielles pour communiquer les résultats de manière efficace.
+					</div>
+
+					<div class="mt-5 font-weight-bold" style="color:#E3342F">INSCRIPTION</div>
+					<div class="font-weight-bold">Auditeurs</div>
+					<div>
+						Pour que des élèves puissent suivre la JFRL en visioconférence, une personne de l'établissement doit:
+						<ul>
+							<li>s'inscrire sur le site de la JFRL: www.jfrl.org</li>
+							<li>compléter, dans la section “Participation”, le champ “Nombre d'élèves qui suivront la JFRL en visioconférence”</li>
+						</ul>
+					</div>
+					<div class="font-weight-bold">Intervenants</div>
+					L'enseignant qui encadre les groupe d'élève qui souhaitent intervenir (en présentiel ou à distance) pendant la JFRL doit:
+					<ul>
+						<li>s'inscrire sur le site de la JFRL: www.jfrl.org</li>
+						<li>compléter les données de la section “Participation”</li>
+						<li>déposer une présentation ou une ébauche de présentation (les données peuvent être mises à jour ultérieurement)</li>
+					</ul>
+				</div>
 			</div>
 		</div><!-- row -->
 
-		<div class="row mt-5">
-			<div class="col-md-12 text-center">
-				<a href="https://www.sciencescope.org/" target="_blank"><img src="{{ asset('img/logo-sciencescope.png') }}" height="60" class="pl-2 pr-2" /></a>
-				<a href="https://www.lfitokyo.org/" target="_blank"><img src="{{ asset('img/logo-lfit.png') }}" height="60" class="pl-2 pr-2" /></a>
-				<a href="https://www.aefe.fr/" target="_blank"><img src="{{ asset('img/logo-aefe-zap.png') }}" height="80" class="pl-3 pr-2" /></a>
-				<a href="https://www.aefe.fr/" target="_blank"><img src="{{ asset('img/logo-cnrs.png') }}" height="70" class="pl-3 pr-2" /></a>
-				<a href="https://www.aefe.fr/" target="_blank"><img src="{{ asset('img/logo-ambassade.jpg') }}" height="80" class="pl-3 pr-2" /></a>
-			</div>
-		</div><!-- row -->
+
 
 	</div><!-- container -->
 	

@@ -66,19 +66,19 @@
                             <tr>
                                 <td nowrap>Nombre d'élèves qui suivront la JFRL en visioconférence</td>
                                 <td>:</td>
-                                <td class="text-success text-monospace font-weight-bold" nowrap>{{ Auth::user()->nb_visio }}</td>
+                                <td class="text-danger text-monospace font-weight-bold" nowrap>{{ Auth::user()->nb_visio }}</td>
 								<td rowspan="4" class="text-right align-middle" style="width:100%"><a class="ml-4 btn btn-sm btn-light" href="{{ route('fiche-inscription-modifier_get') }}" data-toggle="tooltip" data-placement="top" title="modifier ces informations" role="button"><i class="fas fa-pen"></i></a></td>
                             </tr>
                             <tr>
 								<td nowrap>Nombre d'élèves qui feront une présentation en distanciel</td>
 								<td>:</td>
-                                <td class="text-success text-monospace font-weight-bold" nowrap>{{ Auth::user()->nb_distanciel }}</td>
+                                <td class="text-danger text-monospace font-weight-bold" nowrap>{{ Auth::user()->nb_distanciel }}</td>
                             </tr>
 
                             <tr>
 								<td nowrap>Nombre d'élèves qui feront une présentation en présentiel</td>
 								<td>:</td>
-								<td class="text-success text-monospace font-weight-bold" nowrap>{{ Auth::user()->nb_presentiel }}</td>
+								<td class="text-danger text-monospace font-weight-bold" nowrap>{{ Auth::user()->nb_presentiel }}</td>
 							</tr>	
                         </table>
 
@@ -90,16 +90,13 @@
                     <div class="col-md-10 offset-md-1">
 					CALENDRIER
 					<ul>
-					<li><b class="text-monospace text-danger">8 novembre</b> : fin des dépôts des propositions de présentations (poster, présentation courte ou longue)</li>
+					<li><b class="text-monospace text-success">8 novembre</b> : fin des dépôts des propositions de présentations (poster, présentation courte ou longue)</li>
 					<li><b class="text-monospace">du 8 au 22 novembre</b> : étude des dossiers</li>
 					<li><b class="text-monospace">25 novembre</b> : publication du programme de la JFRL 2024</li>
 					<li><b class="text-monospace text-primary">13 décembre</b> : JFRL 2024</li>
 					</div>
 				</div>
 				
-				
-				
-
 				<div class="row mb-5">
                     <div class="col-md-12">
 						@if($presentations->isNotEmpty())
