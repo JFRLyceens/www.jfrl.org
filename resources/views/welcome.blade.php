@@ -23,7 +23,7 @@
 		}
 
 		.titre-2 {
-			font-size:2.2rem;
+			font-size:2rem;
 			text-align:right;
 			font-weight:bold;
 		}
