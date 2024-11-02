@@ -136,6 +136,16 @@
 						Les élèves doivent ensuite préparer le texte de leur intervention orale ou un poster scientifique en respectant les formats académiques (introduction, méthodologie, résultats, discussion). La clarté et la concision sont essentielles pour communiquer les résultats de manière efficace.
 					</div>
 
+					<div class="mt-5 font-weight-bold" style="color:#E3342F">PRÉSENTATIONS</div>
+					<div>
+						Trois types de présentations :
+						<ul>
+							<li>présentation orale courte (5 minutes + 5 minutes de questions) en présentiel ou distanciel</li>
+							<li>présentation orale longue (20 minutes + 10 minutes de questions) en présentiel ou distanciel</li>
+							<li>poster en présentiel</li>
+						</ul>
+					</div>
+
 					<div class="mt-5 font-weight-bold" style="color:#E3342F">INSCRIPTION</div>
 					<div class="font-weight-bold">Auditeurs</div>
 					<div>
