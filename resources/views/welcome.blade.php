@@ -140,8 +140,8 @@
 					<div>
 						Trois types de présentations :
 						<ul>
-							<li>Présentation orale courte (5 minutes + 5 minutes de questions) en présentiel ou distanciel;</li>
-							<li>Présentation orale longue (20 minutes + 10 minutes de questions) en présentiel ou distanciel;</li>
+							<li>Présentation orale courte (5 minutes + 5 minutes de questions) en présentiel ou distanciel.</li>
+							<li>Présentation orale longue (20 minutes + 10 minutes de questions) en présentiel ou distanciel.</li>
 							<li>Poster en présentiel.</li>
 						</ul>
 					</div>
