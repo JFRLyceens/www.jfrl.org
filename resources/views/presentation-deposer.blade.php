@@ -113,7 +113,7 @@ $presentation = App\Models\Presentation::where([['user_id', Auth::id()], ['id', 
                     <!-- RESUME -->
                     <div class="form-group">
                         <div class="text-info">RESUMÉ <sup class="text-danger">*</sup></div>
-                        <div class="text-monospace text-muted small mb-1">2000 caractères minimum</div>
+                        <div class="text-monospace text-muted small mb-1">2000 caractères minimum (~ 300/350 mots)</div>
                         <textarea class="form-control" id="abstract" name="abstract" rows="10" required>@if(isset($presentation)) {{$presentation->abstract}} @endif</textarea>
                         <div id="error_abstract" class="mt-1 text-danger text-monospace small" role="alert">&nbsp;</div>      
                     </div>          
