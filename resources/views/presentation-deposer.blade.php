@@ -65,11 +65,11 @@ $presentation = App\Models\Presentation::where([['user_id', Auth::id()], ['id', 
                         <div>
                             <div class="custom-control custom-radio">
                                 <input class="custom-control-input" type="radio" name="format" id="court" value="court" @if(isset($presentation) AND $presentation->format == 'court') checked @endif>
-                                <label class="custom-control-label" for="court">Court (4 minutes de présentation + 1 minute de questions)</label>
+                                <label class="custom-control-label" for="court">Court (5 minutes de présentation + 5 minute de questions)</label>
                             </div>
                             <div class="custom-control custom-radio">
                                 <input class="custom-control-input" type="radio" name="format" id="long" value="long" @if(isset($presentation) AND $presentation->format == 'long') checked @endif>
-                                <label class="custom-control-label" for="long">Long (15 minutes de présentation + 5 minute de questions) - 2 intervenants ou plus</label>
+                                <label class="custom-control-label" for="long">Long (20 minutes de présentation + 10 minute de questions) - 2 intervenants ou plus</label>
                             </div>
                             <div class="custom-control custom-radio">
                                 <input class="custom-control-input" type="radio" name="format" id="poster" value="poster" @if(isset($presentation) AND $presentation->format == 'poster') checked @endif>
