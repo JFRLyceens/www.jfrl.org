@@ -25,32 +25,33 @@ if (Auth::user()->is_admin != 1) {
         </div><!-- /row -->
 
         <?php
-        $etablissements = App\Models\User::all();
+        $etablissements = App\Models\User::where([['email_verified_at', '!=', NULL]])->get();
         $etablissements_sans_validation_email = App\Models\User::where([['is_admin', 0], ['nb_participants', '>', 0], ['email_verified_at', NULL], ['annulation', 0]])->get();
         ?>
 
         <div class="row pt-3">
             <div class="col-md-12 text-center small">
-                <span style="font-weight:bold;color:#d35400">{{ App\Models\User::where([['is_orga', '!=', 1]])->count(); }}</span>
+                <span style="font-weight:bold;color:#d35400">{{ App\Models\User::where([['is_orga', '!=', 1],['email_verified_at', '!=', NULL]])->count(); }}</span>
                 <span class="text-monospace " style="color:silver"> enseignants inscrits</span>
-                <span class="ml-3" style="font-weight:bold;color:#d35400">{{ App\Models\User::where([['is_orga', '!=', 1]])->distinct()->count('ville'); }}</span>
+                <span class="ml-3" style="font-weight:bold;color:#d35400">{{ App\Models\User::where([['is_orga', '!=', 1],['email_verified_at', '!=', NULL]])->distinct()->count('ville'); }}</span>
                 <span class="text-monospace " style="color:silver"> villes</span>
-                <span class="ml-3" style="font-weight:bold;color:#d35400">{{ App\Models\User::where([['is_orga', '!=', 1]])->distinct()->count('pays'); }}</span>
+                <span class="ml-3" style="font-weight:bold;color:#d35400">{{ App\Models\User::where([['is_orga', '!=', 1],['email_verified_at', '!=', NULL]])->distinct()->count('pays'); }}</span>
                 <span class="text-monospace " style="color:silver"> pays</span>			
             </div>
         </div>
 
         <div class="row pb-5">
             <div class="col-md-12 text-center small">
-                <span class="ml-3" style="font-weight:bold;color:#d35400">{{ App\Models\User::where([['is_orga', '!=', 1]])->sum('nb_visio'); }}</span>
+                <span class="ml-3" style="font-weight:bold;color:#d35400">{{ App\Models\User::where([['is_orga', '!=', 1],['email_verified_at', '!=', NULL]])->sum('nb_visio'); }}</span>
                 <span class="text-monospace " style="color:silver"> auditeurs en visio</span>
-                <span class="ml-3" style="font-weight:bold;color:#d35400">{{ App\Models\User::where([['is_orga', '!=', 1]])->sum('nb_distanciel'); }}</span>
+                <span class="ml-3" style="font-weight:bold;color:#d35400">{{ App\Models\User::where([['is_orga', '!=', 1],['email_verified_at', '!=', NULL]])->sum('nb_distanciel'); }}</span>
                 <span class="text-monospace " style="color:silver"> intervenants en distanciel</span>
-                <span class="ml-3" style="font-weight:bold;color:#d35400">{{ App\Models\User::where([['is_orga', '!=', 1]])->sum('nb_presentiel'); }}</span>
+                <span class="ml-3" style="font-weight:bold;color:#d35400">{{ App\Models\User::where([['is_orga', '!=', 1],['email_verified_at', '!=', NULL]])->sum('nb_presentiel'); }}</span>
                 <span class="text-monospace " style="color:silver"> intervenants en présentiel</span>
             </div>
         </div>
 
+		<!--
         <div class="row">
             <div class="col-md-12">
                 <a class="" data-toggle="collapse" href="#etablissements_sans_validation_email" role="button" aria-expanded="false" aria-controls="etablissements_sans_validation_email"><i class="fas fa-plus-square"></i></a> Enseignants sans validation d'email : {{$etablissements_sans_validation_email->count()}}
@@ -62,11 +63,12 @@ if (Auth::user()->is_admin != 1) {
                     @endphp
                 </div>
             </div>
-        </div><!-- /row -->   
+        </div>
+		-->		
     
         <div class="row">
             <div class="col-md-12">
-                <a class="" data-toggle="collapse" href="#etablissements_inscrits" role="button" aria-expanded="false" aria-controls="etablissements_inscrits"><i class="fas fa-plus-square"></i></a> Enseignants inscrits : {{ App\Models\User::where([['is_orga', '!=', 1]])->count(); }}
+                <a class="" data-toggle="collapse" href="#etablissements_inscrits" role="button" aria-expanded="false" aria-controls="etablissements_inscrits"><i class="fas fa-plus-square"></i></a> Enseignants inscrits : {{ App\Models\User::where([['is_orga', '!=', 1],['email_verified_at', '!=', NULL]])->count(); }}
                 <div class="col-md-12 p-3 text-monospace small text-muted collapse" id="etablissements_inscrits" style="background-color:white;border:1px silver solid;border-radius:4px;">
                     @php
                     foreach($etablissements AS $etablissement){
@@ -177,6 +179,7 @@ if (Auth::user()->is_admin != 1) {
                 <div class="mt-5 font-weight-bold">PRÉSENTATIONS</div>
 
                 @foreach($etablissements AS $etablissement)
+				@if ($etablissement->is_orga !== 1)
 				
 
                     @php
@@ -196,6 +199,7 @@ if (Auth::user()->is_admin != 1) {
                                 <div class="mt-1"><b>Format</b>: {{$presentation->format}}</div>
                                 <div class="mt-1 font-weight-bold">Résumé</div>
                                 <div>{{$presentation->abstract}}</div>
+                                <div class="small text-muted mt-2">{{strlen($presentation->abstract)}} caractères</div>
 
                                 @php
                                     $directory = storage_path('app/public/presentations/'.str_pad(Auth::id(), 3, '0', STR_PAD_LEFT).'/'.$presentation->jeton);
@@ -224,7 +228,7 @@ if (Auth::user()->is_admin != 1) {
                     <div class="mt-1 border rounded p-3 text-monospace bg-white small">pas de présentation déposée</div>
                     @endif
 				
-				
+				@endif
                 @endforeach
             </div>
         </div>

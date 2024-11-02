@@ -65,11 +65,11 @@ $presentation = App\Models\Presentation::where([['user_id', Auth::id()], ['id', 
                         <div>
                             <div class="custom-control custom-radio">
                                 <input class="custom-control-input" type="radio" name="format" id="court" value="court" @if(isset($presentation) AND $presentation->format == 'court') checked @endif>
-                                <label class="custom-control-label" for="court">Court (5 minutes de présentation + 5 minute de questions)</label>
+                                <label class="custom-control-label" for="court">Court (4 minutes de présentation + 1 minute de questions)</label>
                             </div>
                             <div class="custom-control custom-radio">
                                 <input class="custom-control-input" type="radio" name="format" id="long" value="long" @if(isset($presentation) AND $presentation->format == 'long') checked @endif>
-                                <label class="custom-control-label" for="long">Long (20 minutes de présentation + 10 minute de questions) - 2 intervenants ou plus</label>
+                                <label class="custom-control-label" for="long">Long (15 minutes de présentation + 5 minute de questions) - 2 intervenants ou plus</label>
                             </div>
                             <div class="custom-control custom-radio">
                                 <input class="custom-control-input" type="radio" name="format" id="poster" value="poster" @if(isset($presentation) AND $presentation->format == 'poster') checked @endif>
@@ -113,7 +113,7 @@ $presentation = App\Models\Presentation::where([['user_id', Auth::id()], ['id', 
                     <!-- RESUME -->
                     <div class="form-group">
                         <div class="text-info">RESUMÉ <sup class="text-danger">*</sup></div>
-                        <div class="text-monospace text-muted small mb-1">80 caractères minimum</div>
+                        <div class="text-monospace text-muted small mb-1">2000 caractères minimum</div>
                         <textarea class="form-control" id="abstract" name="abstract" rows="10" required>@if(isset($presentation)) {{$presentation->abstract}} @endif</textarea>
                         <div id="error_abstract" class="mt-1 text-danger text-monospace small" role="alert">&nbsp;</div>      
                     </div>          
@@ -215,7 +215,7 @@ $presentation = App\Models\Presentation::where([['user_id', Auth::id()], ['id', 
                     e.preventDefault();
                     e.stopPropagation();
 
-                    var regex = /^[\p{L}0-9\s\-_.,!?()@#&%$'"]+$/u;
+                    //var regex = /^[\p{L}0-9\s\-_.,!?()@#&%$'"]+$/u;
 
                     // initialisation messages erreur
                     document.getElementById('title').classList.remove('is-invalid');
@@ -236,8 +236,8 @@ $presentation = App\Models\Presentation::where([['user_id', Auth::id()], ['id', 
                         document.getElementById('error_title').innerHTML = "trois caratères minimum";
                     } else if (document.getElementById('title').value.length > 160) {
                         document.getElementById('error_title').innerHTML = "pas plus de 160 caratères";
-                    } else if (regex.test(document.getElementById('title').value) == false) {
-                        document.getElementById('error_title').innerHTML = "caratères spéciaux non autorisés";
+                    //} else if (regex.test(document.getElementById('title').value) == false) {
+                    //    document.getElementById('error_title').innerHTML = "caratères spéciaux non autorisés";
                     } else if (!document.querySelector('input[name="type"]:checked')) {
                         document.getElementById('error_type').innerHTML = "faire un choix";
                     } else if (!document.querySelector('input[name="format"]:checked')) {
@@ -248,12 +248,12 @@ $presentation = App\Models\Presentation::where([['user_id', Auth::id()], ['id', 
                     } else if (document.getElementById('encadrants').value.length < 1) {
                         document.getElementById('encadrants').classList.add('is-invalid');
                         document.getElementById('error_encadrants').innerHTML = "champ obligatoire";
-                    } else if (document.getElementById('abstract').value.length < 80) {
+                    } else if (document.getElementById('abstract').value.length < 2000) {
                         document.getElementById('abstract').classList.add('is-invalid');
-                        document.getElementById('error_abstract').innerHTML = "champ obligatoire (80 caractères minimum)";
-                    } else if (document.getElementById('abstract').value.length > 2000) {
+                        document.getElementById('error_abstract').innerHTML = "champ obligatoire (2000 caractères minimum)";
+                    } else if (document.getElementById('abstract').value.length > 2500) {
                         document.getElementById('abstract').classList.add('is-invalid');
-                        document.getElementById('error_abstract').innerHTML = "champ obligatoire (2000 caractères maximum)";                         
+                        document.getElementById('error_abstract').innerHTML = "champ obligatoire (2500 caractères maximum)";                         
                     } else {
                         // Si aucun fichier dans Dropzone
                         if (dz.files.length === 0) {
