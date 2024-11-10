@@ -81,7 +81,7 @@
 					<div class="font-weight-bold" style="color:#E3342F">CALENDRIER</div>
 					<ul>
 						<li><b class="text-monospace text-success">15 novembre</b> : fin des dépôts des propositions de présentations</li>
-						<li><b class="text-monospace">du 8 au 22 novembre</b> : étude des dossiers</li>
+						<li><b class="text-monospace">du 15 au 22 novembre</b> : étude des dossiers</li>
 						<li><b class="text-monospace">25 novembre</b> : publication du programme de la JFRL 2024</li>
 						<li><b class="text-monospace text-primary">13 décembre</b> : JFRL 2024</li>
 					</ul>
