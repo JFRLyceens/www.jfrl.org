@@ -52,7 +52,6 @@
 			<div class="col-md-6">
 				<iframe id="cadre-carte" width="100%" style="aspect-ratio:1/1;" frameborder="0" allowfullscreen src="//umap.openstreetmap.fr/en/map/jfrl_1058870"></iframe>
 			</div>
-
 		</div><!-- row -->
 
 		<div class="row mt-4">
