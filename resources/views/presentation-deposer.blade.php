@@ -248,9 +248,9 @@ $presentation = App\Models\Presentation::where([['user_id', Auth::id()], ['id', 
                     } else if (document.getElementById('encadrants').value.length < 1) {
                         document.getElementById('encadrants').classList.add('is-invalid');
                         document.getElementById('error_encadrants').innerHTML = "champ obligatoire";
-                    } else if (document.getElementById('abstract').value.length < 2000) {
+                    } else if (document.getElementById('abstract').value.length < 500) {
                         document.getElementById('abstract').classList.add('is-invalid');
-                        document.getElementById('error_abstract').innerHTML = "champ obligatoire (2000 caractères minimum)";
+                        document.getElementById('error_abstract').innerHTML = "champ obligatoire (500 caractères minimum)";
                     } else if (document.getElementById('abstract').value.length > 2500) {
                         document.getElementById('abstract').classList.add('is-invalid');
                         document.getElementById('error_abstract').innerHTML = "champ obligatoire (2500 caractères maximum)";                         
