@@ -201,6 +201,14 @@ if (Auth::user()->is_admin != 1) {
                                 <div>{{$presentation->abstract}}</div>
                                 <div class="small text-muted mt-2">{{strlen($presentation->abstract)}} caractères</div>
 
+                                <!-- ENCADRANTS -->
+                                <div class="mt-3 font-weight-bold">Encadrants</div>
+                                {{$presentation->encadrants}}
+
+                                <!-- INTERVENANTS -->
+                                <div class="mt-3 font-weight-bold">Intervenants</div>
+                                {{$presentation->intervenants}}
+
                                 @php
                                     $directory = storage_path('app/public/presentations/'.str_pad(Auth::id(), 3, '0', STR_PAD_LEFT).'/'.$presentation->jeton);
                                     $documents = [];

@@ -113,7 +113,7 @@ $presentation = App\Models\Presentation::where([['user_id', Auth::id()], ['id', 
                     <!-- RESUME -->
                     <div class="form-group">
                         <div class="text-info">RESUMÉ <sup class="text-danger">*</sup></div>
-                        <div class="text-monospace text-muted small mb-1">2000 caractères minimum (~ 300/350 mots)</div>
+                        <div class="text-monospace text-muted small mb-1">500 ~ 2500 caractères</div>
                         <textarea class="form-control" id="abstract" name="abstract" rows="10" required>@if(isset($presentation)) {{$presentation->abstract}} @endif</textarea>
                         <div id="error_abstract" class="mt-1 text-danger text-monospace small" role="alert">&nbsp;</div>      
                     </div>          
@@ -250,10 +250,10 @@ $presentation = App\Models\Presentation::where([['user_id', Auth::id()], ['id', 
                         document.getElementById('error_encadrants').innerHTML = "champ obligatoire";
                     } else if (document.getElementById('abstract').value.length < 500) {
                         document.getElementById('abstract').classList.add('is-invalid');
-                        document.getElementById('error_abstract').innerHTML = "champ obligatoire (500 caractères minimum)";
+                        document.getElementById('error_abstract').innerHTML = document.getElementById('abstract').value.length + " caractères (500 minimum)";
                     } else if (document.getElementById('abstract').value.length > 2500) {
                         document.getElementById('abstract').classList.add('is-invalid');
-                        document.getElementById('error_abstract').innerHTML = "champ obligatoire (2500 caractères maximum)";                         
+                        document.getElementById('error_abstract').innerHTML = document.getElementById('abstract').value.length + " caractères  (2500 maximum)";                         
                     } else {
                         // Si aucun fichier dans Dropzone
                         if (dz.files.length === 0) {
