@@ -26,6 +26,7 @@ if (Auth::user()->is_admin != 1) {
 
         <?php
         $etablissements = App\Models\User::where([['email_verified_at', '!=', NULL]])->get();
+        $auditeurs = App\Models\Auditeur::all();
         $etablissements_sans_validation_email = App\Models\User::where([['is_admin', 0], ['nb_participants', '>', 0], ['email_verified_at', NULL], ['annulation', 0]])->get();
         ?>
 
@@ -97,8 +98,8 @@ if (Auth::user()->is_admin != 1) {
                                 <th scope="col">Dist.</th>
                                 <th scope="col">Prés.</th>
                                 <th scope="col">Ac. / zone</th>
-                                <th scope="col">Pays</th>
                                 <th scope="col">Ville</th>
+                                <th scope="col">Pays</th>
                                 <th scope="col">Courriel</th>
                             </tr>
                         </thead>
@@ -106,7 +107,7 @@ if (Auth::user()->is_admin != 1) {
                             @foreach($etablissements AS $etablissement)
 							@if ($etablissement->is_admin == 1)
                             <tr>
-                                <td class="text-success">{{$loop->index + 1}}</td>
+                                <td class="text-success">{{$loop->iteration}}</td>
                                 <td>{{$etablissement->id}}</td>
                                 <td>{{$etablissement->prenom}}</td>
                                 <td>{{$etablissement->nom}}</td>
@@ -115,8 +116,8 @@ if (Auth::user()->is_admin != 1) {
                                 <td>{{$etablissement->nb_distanciel}}</td>
                                 <td>{{$etablissement->nb_presentiel}}</td>
                                 <td>{{$etablissement->ac_zone}}</td>
-                                <td>{{$etablissement->pays}}</td>
                                 <td>{{$etablissement->ville}}</td>
+                                <td>{{$etablissement->pays}}</td>
                                 <td>{{$etablissement->email}}</td>
                             </tr>
 							@endif
@@ -127,7 +128,7 @@ if (Auth::user()->is_admin != 1) {
             </div>
         </div><!-- /row -->
 
-		<div class="mt-4 text-monospace font-weight-bold">ENSEIGNANTS INSCRITS</div>
+		<div class="mt-4 text-monospace font-weight-bold">ENSEIGNANTS ENCADRANTS</div>
         <div class="row">
             <div class="col-md-12">
                 <div class="table-responsive">
@@ -143,8 +144,8 @@ if (Auth::user()->is_admin != 1) {
                                 <th scope="col">Dist.</th>
                                 <th scope="col">Prés.</th>
                                 <th scope="col">Ac. / zone</th>
-                                <th scope="col">Pays</th>
                                 <th scope="col">Ville</th>
+                                <th scope="col">Pays</th>
                                 <th scope="col">Courriel</th>
                             </tr>
                         </thead>
@@ -152,7 +153,7 @@ if (Auth::user()->is_admin != 1) {
                             @foreach($etablissements AS $etablissement)
 							@if ($etablissement->is_orga !== 1)
                             <tr>
-                                <td class="text-success">{{$loop->index + 1}}</td>
+                                <td class="text-success">{{$loop->iteration}}</td>
                                 <td>{{$etablissement->id}}</td>
                                 <td>{{$etablissement->prenom}}</td>
                                 <td>{{$etablissement->nom}}</td>
@@ -161,8 +162,8 @@ if (Auth::user()->is_admin != 1) {
                                 <td>{{$etablissement->nb_distanciel}}</td>
                                 <td>{{$etablissement->nb_presentiel}}</td>
                                 <td>{{$etablissement->ac_zone}}</td>
-                                <td>{{$etablissement->pays}}</td>
                                 <td>{{$etablissement->ville}}</td>
+                                <td>{{$etablissement->pays}}</td>
                                 <td>{{$etablissement->email}}</td>
                             </tr>
 							@endif
@@ -173,10 +174,48 @@ if (Auth::user()->is_admin != 1) {
             </div>
         </div><!-- /row -->
 
+		<div class="mt-4 text-monospace font-weight-bold">AUDITEURS</div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="table-responsive">
+                    <table class="table table-borderless table-hover table-striped table-sm text-monospace text-muted" style="font-size:75%">
+                        <thead>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col">Id</th>
+                                <th scope="col">Prénom</th>
+                                <th scope="col">Nom</th>
+                                <th scope="col">Affiliation</th>
+                                <th scope="col">Ville</th>
+                                <th scope="col">Pays</th>
+                                <th scope="col">Participation</th>
+                                <th scope="col">Courriel</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach($auditeurs AS $auditeur)
+                            <tr>
+                                <td class="text-success">{{$loop->iteration}}</td>
+                                <td>{{$auditeur->id}}</td>
+                                <td>{{$auditeur->prenom}}</td>
+                                <td>{{$auditeur->nom}}</td>
+                                <td>{{$auditeur->affiliation}}</td>
+                                <td>{{$auditeur->ville}}</td>
+                                <td>{{$auditeur->pays}}</td>
+                                <td>{{$auditeur->participation}}</td>
+                                <td>{{$auditeur->email}}</td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div><!-- /row -->
+
         <div class="row">
             <div class="col-md-12 text-monospace">
 
-                <div class="mt-5 font-weight-bold">PRÉSENTATIONS</div>
+                <div class="mt-4 font-weight-bold">PRÉSENTATIONS</div>
 
                 @foreach($etablissements AS $etablissement)
 				@if ($etablissement->is_orga !== 1)
