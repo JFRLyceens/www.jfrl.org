@@ -26,7 +26,7 @@
 
 				<div class="row mb-5 mt-2">
 					<div class="col-md-3 offset-md-3">
-                        <a class="btn btn-primary btn-lg d-block" href="/inscription-auditeur" role="button">auditeur</a>
+                        <a class="btn btn-primary btn-lg d-block" href="/auditeur" role="button">auditeur</a>
                         <div class="mt-1 text-monospace small text-justify">pour assister à la JFRL, sur place ou en visioconférence</div>
 					</div>
                     <div class="col-md-3">

@@ -68,7 +68,7 @@
 
 							<div class="form-group row">
 								<label for="affiliation" class="col-md-3 col-form-label text-md-right text-dark text-monospace">affiliation<sup class="text-danger">&nbsp;*</sup>
-                                <div class="small font-italic pr-2 pt-1" style="opacity:0.5">institution, établissement, organisme...</span></div>
+                                <div class="small font-italic pr-2" style="opacity:0.5">institution, établissement, organisme...</span></div>
                                 </label>
 								<div class="col-md-8">
 									<input id="affiliation" type="text" class="form-control @error('affiliation') is-invalid @enderror" name="affiliation" value="{{ old('affiliation') }}" />
