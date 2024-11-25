@@ -90,11 +90,25 @@
                     <div class="col-md-10 offset-md-1">
 					CALENDRIER
 					<ul>
-					<li><b class="text-monospace text-success">15 novembre</b> : fin des dépôts des propositions de présentations</li>
-					<li><b class="text-monospace">du 15 au 22 novembre</b> : étude des dossiers</li>
-					<li><b class="text-monospace">25 novembre</b> : publication du programme de la JFRL 2024</li>
-					<li><b class="text-monospace text-primary">13 décembre</b> : JFRL 2024</li>
-					</div>
+						<li><b class="text-monospace text-success">15 novembre</b> : fin des dépôts des propositions de présentations</li>
+						<li><b class="text-monospace">du 15 au 22 novembre</b> : étude des dossiers</li>
+						<li><b class="text-monospace">25 novembre</b> : publication du programme de la JFRL 2024</li>
+						<li><b class="text-monospace text-primary">13 décembre</b> : JFRL 2024</li>
+					</ul>
+				</div>
+				</div>
+
+				<div class="row mb-4">
+                    <div class="col-md-10 offset-md-1">
+					DOCUMENTS
+					<ul>
+						<li style="line-height:1.1">
+							Demande d'autorisation pour l'enregistrement et l'utilisation de l'image et de la voix  d'une personne mineure
+							<br /><span class="small text-muted text-italic">à télécharger, à faire remplir et à déposer avec les documents de la présentation</span>
+							<br /><span class="text-monospace" style="line-height:2"><a href="/docs/autorisation_droit_image.pdf" class="text-decoration-none"><i class="fa-regular fa-circle-down"></i><b>.pdf</b></a> ~ <a href="/docs/autorisation_droit_image.odt" class="text-decoration-none"><i class="fa-regular fa-circle-down"></i><b>.odt</b></a></span>
+						</li>
+					</ul>
+				</div>
 				</div>
 				
 				<div class="row mb-5">
