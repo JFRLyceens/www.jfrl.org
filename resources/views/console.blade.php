@@ -86,7 +86,7 @@
     				</div>
     			</div>
 				
-				<div class="row mb-4">
+				<div class="row mb-3">
                     <div class="col-md-10 offset-md-1">
 					CALENDRIER
 					<ul>
@@ -98,7 +98,7 @@
 				</div>
 				</div>
 
-				<div class="row mb-4">
+				<div class="row mb-3">
                     <div class="col-md-10 offset-md-1">
 					DOCUMENTS
 					<ul>
