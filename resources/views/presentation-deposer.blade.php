@@ -124,7 +124,7 @@ $presentation = App\Models\Presentation::where([['user_id', Auth::id()], ['id', 
                     <div class="text-monospace text-muted small font-italic">Vous pouvez ajouter des documents plus tard</div>
                     @endif
                     <div class="text-monospace text-muted small">Poster, présentation détaillée des travaux, transcription, autorisation parentale d'enregistrement et d'utilisation de l'image/la voix...</div>
-                    <div class="text-monospace text-muted small mb-1">Douze documents maximum de moins de 20 Mo chacun - Formats autorisés: pdf, odt, docx, svg</div>
+                    <div class="text-monospace text-muted small mb-1">Douze documents maximum de moins de 20 Mo chacun - Formats autorisés: pdf, odt, docx, svg, png, jpg, jpeg</div>
                     
                     @if(isset($presentation))
 
@@ -194,7 +194,7 @@ $presentation = App\Models\Presentation::where([['user_id', Auth::id()], ['id', 
                 maxFiles: @if(isset($presentation)) {{12-$nb_documents}} @else 12 @endif,
                 addRemoveLinks: true,
                 headers: { 'X-CSRF-TOKEN': "{{ csrf_token() }}" },
-                acceptedFiles: ".pdf, .odt, .docx, .svg",
+                acceptedFiles: ".pdf, .odt, .docx, .svg, .png, .jpg, .jpeg",
                 // Language Strings
                 dictFileTooBig: "Ce fichier est trop lourd. 10 Mo max.",
                 dictInvalidFileType: "format non valide",
