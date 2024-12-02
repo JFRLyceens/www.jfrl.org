@@ -155,7 +155,7 @@
 						</ul>
 					</div>
 					<div class="font-weight-bold">Intervenants</div>
-					L'enseignant qui encadre les groupe d'élève qui souhaitent intervenir (en présentiel ou à distance) pendant la JFRL doit:
+					L'enseignant qui encadre le groupe d'élèves qui souhaitent intervenir (en présentiel ou à distance) pendant la JFRL doit:
 					<ul>
 						<li>s'inscrire sur le site de la JFRL: www.jfrl.org</li>
 						<li>compléter les données de la section “Participation”</li>
