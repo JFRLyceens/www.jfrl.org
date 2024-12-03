@@ -114,7 +114,7 @@
 					<tr>
 						<td class="prog_heure">14h00</td>
 						<td class="pb-3">
-							Dynamique par RMN d'un oligonucléotide riche en cytidines.
+							Dynamique par RMN d'un fragment génomique du virus SARS-CoV-2.
 							<br />
 							<small class="text-muted">Lycée Français International de Tokyo. Projet encadré par M. Snoussi.</small>
 						</td>
@@ -122,7 +122,7 @@
 					<tr>
 						<td class="prog_heure">14h10</td>
 						<td class="pb-3">
-							Dynamique par RMN d'un fragment génomique du virus SARS-CoV-2.
+							Dynamique par RMN d'un oligonucléotide riche en cytidines.
 							<br />
 							<small class="text-muted">Lycée Français International de Tokyo. Projet encadré par M. Snoussi.</small>
 						</td>
