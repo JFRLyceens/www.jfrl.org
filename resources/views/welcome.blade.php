@@ -27,11 +27,21 @@
 			text-align:right;
 			font-weight:bold;
 		}
+
+		.prog_heure {
+			padding:4px 10px 0px 0px;
+			color:#e3342f !important;
+			font-family:SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+			font-weight:bold;
+			font-size:80%;
+			vertical-align:top;
+		}
+
 	</style>
 </head>
 <body>
 
-	<div class="container mt-4 mb-5">
+	<div class="container mt-4">
 
 		<div class="row">
 			<div class="col-md-6">
@@ -56,33 +66,165 @@
 
 		<div class="row mt-4">
 			<div class="col-md-10 offset-md-1" style="font-family: 'Latin Modern Roman', serif;font-size:20px;text-align:justify;">
-				<p>Depuis 2017, le <a href="https://www.lfitokyo.org/" target="_blank">Lycée Français International de Tokyo</a> participe à la <a href="https://www.sciencescope.org/events-2/jfr/jfr2023/" target="_blank">Journée Francophone de la Recherche (JFR)</a> organisée depuis bientôt trois décennies par <a href="https://www.sciencescope.org/" target="_blank">Sciencescope</a>, l'association des étudiants et chercheurs francophones au Japon, avec le soutien de l'<a href="https://jp.ambafrance.org/" target="_blank">Ambassade de France au Japon</a>, du <a href="https://tokyo.cnrs.fr/" target="_blank">CNRS</a> et de l'<a href="https://www.mfj.gr.jp/" target="_blank">Institut Français de Recherches sur le Japon - Maison Franco-Japonaise (IFRJ-MFJ)</a>. L'expérience de ces dernières années ayant été concluante, il a été décidé d'organiser, avec le soutien de l'<a href="https://www.aefe.fr/" target="_blank">AEFE</a>, une Journée Francophone de la Recherche des Lycéen(ne)s, ouverte à tous les lycées français de la zone Asie-Pacifique, le 13 décembre 2024. Cette première édition aura lieu à Tokyo.
-				</p>
-				Le but est d'offrir à des lycéens la possibilité :
-				<ul>
-					<li>d'assister à des communications</li>
-					<li>de présenter à l'oral et/ou sous forme de poster un travail de recherche solide qu'ils auront mené avec l'aide de leurs enseignants et éventuellement de chercheurs confirmés.</li>
-				</ul>
+				<p>Depuis 2017, le <a href="https://www.lfitokyo.org/" target="_blank">Lycée Français International de Tokyo</a> participe à la <a href="https://www.sciencescope.org/events-2/jfr/jfr2023/" target="_blank">Journée Francophone de la Recherche (JFR)</a> organisée depuis bientôt trois décennies par <a href="https://www.sciencescope.org/" target="_blank">Sciencescope</a>, l'association des étudiants et chercheurs francophones au Japon, avec le soutien de l'<a href="https://jp.ambafrance.org/" target="_blank">Ambassade de France au Japon</a>, du <a href="https://tokyo.cnrs.fr/" target="_blank">CNRS</a> et de l'<a href="https://www.mfj.gr.jp/" target="_blank">Institut Français de Recherches sur le Japon - Maison Franco-Japonaise (IFRJ-MFJ)</a>. L'expérience de ces dernières années ayant été concluante, il a été décidé d'organiser, avec le soutien de l'<a href="https://www.aefe.fr/" target="_blank">AEFE</a>, une Journée Francophone de la Recherche des Lycéen(ne)s, ouverte à tous les lycées français de la zone Asie-Pacifique, le 13 décembre 2024. Cette première édition aura lieu à Tokyo.</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid mb-5">
+		<div class="row">
+			<div class="col-md-6 text-right">
+				<img class="img-fluid" src="{{ asset('img/affiche_jfrl_2024.jpg') }}" width="700" class="pr-2" />
+			</div>
+			<div class="col-md-6 pr-5 pt-4" style="font-family:'Latin Modern Roman',serif;font-size:20px;text-align:justify;line-height:1;">
+
+				<table>
+					<tr>
+						<td class="prog_heure">10h00</td>
+						<td class="pb-3">Ouverture / accueil</td>
+					</tr>
+					<tr>
+					<td class="prog_heure">10h30</td>
+						<td class="pb-3">Introduction</td>
+					</tr>
+					<tr>
+					<td class="prog_heure">10h45</td>
+						<td class="pb-3">
+							Les escales des marins français de Tsuruga des années 1880 à la veille de la Première Guerre Mondiale.
+							<br />
+							<small class="text-muted">Lycée Français International de Kyoto. Projet encadré par M. Roynette</small>
+						</td>
+					</tr>
+					<tr>
+						<td class="prog_heure">11h15</td>
+						<td class="pb-3">Visite laboratoire</td>
+					</tr>
+					<tr>
+						<td class="prog_heure">12h00</td>
+						<td class="pb-3">Pause Déjeuner</td>
+					</tr>
+					<tr>
+						<td class="prog_heure">13h30</td>
+						<td class="pb-3">
+							La réception de l'art et de la culture du Japon dans la France des Années folles au prisme de la Revue franco-nipponne (1926-1930). 
+							<br />
+							<small class="text-muted">Lycée Français International de Tokyo. Projet encadré par M. Mastalski & M. Seguela.</small>
+						</td>
+					</tr>
+					<tr>
+						<td class="prog_heure">14h00</td>
+						<td class="pb-3">
+							Dynamique par RMN d'un oligonucléotide riche en cytidines.
+							<br />
+							<small class="text-muted">Lycée Français International de Tokyo. Projet encadré par M. Snoussi.</small>
+						</td>
+					</tr>
+					<tr>
+						<td class="prog_heure">14h10</td>
+						<td class="pb-3">
+							Dynamique par RMN d'un fragment génomique du virus SARS-CoV-2.
+							<br />
+							<small class="text-muted">Lycée Français International de Tokyo. Projet encadré par M. Snoussi.</small>
+						</td>
+					</tr>
+					<tr>
+						<td class="prog_heure">14h20</td>
+						<td class="pb-3">
+							Fernand Pujol, un résistant.
+							<br />
+							<small class="text-muted">Lycée René Descartes de Phnom Penh. Projet encadré par M. Besseyre.</small>
+						</td>
+					</tr>
+					<tr>
+						<td class="prog_heure">14h50</td>
+						<td class="pb-3">Conférence invitée - 1 - Basptiste Alric</td>
+					</tr>
+					<tr>
+						<td class="prog_heure">15h20</td>
+						<td class="pb-3">Pause-café / posters </td>
+					</tr>
+					<tr>
+						<td class="prog_heure">15h50</td>
+						<td class="pb-3">
+							La disparition des langues, de l'Antiquité à nos jours.
+							<br />
+							<small class="text-muted">Lycée Français International de Tokyo. Projet encadré par Mme Gademer.</small>
+						</td>
+					</tr>
+					<tr>
+						<td class="prog_heure">16h20</td>
+						<td class="pb-3">
+							Le rôle de l'écrivain Kuni Matsuo (1899-1975) dans les cercles franco-japonais dans le Paris des années 1920 et 1930.
+							<br />
+							<small class="text-muted">Lycée Français International de Tokyo. Projet encadré par M. Mastalski & M. Seguela.</small>
+						</td>
+					</tr>
+					<tr>
+						<td class="prog_heure">16h30</td>
+						<td class="pb-3">
+							La disparition des langues, de l'Antiquité à nos jours.
+							<br />
+							<small class="text-muted">Lycée Français International de Tokyo. Projet encadré par Mme Gademer.</small>
+						</td>
+					</tr>
+					<tr>
+						<td class="prog_heure">16h40</td>
+						<td class="pb-3">
+							Scientific Game Jam Tokyo 2024 - Soyons Foujita!
+							<br />
+							<small class="text-muted">Lycée Français International de Tokyo. Projet encadré par M. Abbal.</small>
+						</td>
+					</tr>
+					<tr>
+						<td class="prog_heure">16h50</td>
+						<td class="pb-3">
+							Scientific Game Jam Tokyo 2024 - Language defender.
+							<br />
+							<small class="text-muted">Lycée Français International de Tokyo. Projet encadré par M. Abbal.</small>
+						</td>
+					</tr>
+					<tr>
+						<td class="prog_heure">17h00</td>
+						<td class="pb-3">Conférence invitée - 2 - Naoko Hosokawa</td>
+					</tr>
+					<tr>
+						<td class="prog_heure">17h30</td>
+						<td class="pb-3">Mots de clôture</td>
+					</tr>
+					<tr>
+						<td class="prog_heure">17h50</td>
+						<td class="pb-3">Pot convivial</td>
+					</tr>
+				</table>
+
+			</div>
+		</div>
+	</div>
+
+
+	<div class="container mt-4 mb-5">
+		<div class="row mt-4">
+			<div class="col-md-10 offset-md-1" style="font-family: 'Latin Modern Roman', serif;font-size:20px;text-align:justify;">			
 
 				<div class="pt-1 pb-4 text-center text-monospace">
 					<a class="btn btn-light" href="/presentation_JFRL.pdf" role="button" data-toggle="tooltip" data-placement="top" title="Télécharger la présentation de la JFRL au format PDF." target="_blank"><svg xmlns="http://www.w3.org/2000/svg" height="14" width="14" viewBox="0 0 512 512"><path d="M256 0a256 256 0 1 0 0 512A256 256 0 1 0 256 0zM244.7 395.3l-112-112c-4.6-4.6-5.9-11.5-3.5-17.4s8.3-9.9 14.8-9.9l64 0 0-96c0-17.7 14.3-32 32-32l32 0c17.7 0 32 14.3 32 32l0 96 64 0c6.5 0 12.3 3.9 14.8 9.9s1.1 12.9-3.5 17.4l-112 112c-6.2 6.2-16.4 6.2-22.6 0z"/></svg> PRÉSENTATION DE LA JFRL</a>
 				</div>
 
 				<div class="pt-3 text-center">
-						<a href="https://www.sciencescope.org/" target="_blank"><img src="{{ asset('img/logo-sciencescope.png') }}" height="60" class="pl-2 pr-2" /></a>
-						<a href="https://www.lfitokyo.org/" target="_blank"><img src="{{ asset('img/logo-lfit.png') }}" height="60" class="pl-2 pr-2" /></a>
-						<a href="https://www.aefe.fr/" target="_blank"><img src="{{ asset('img/logo-aefe-zap.png') }}" height="80" class="pl-3 pr-2" /></a>
-						<a href="https://www.aefe.fr/" target="_blank"><img src="{{ asset('img/logo-cnrs.png') }}" height="70" class="pl-3 pr-2" /></a>
-						<a href="https://www.aefe.fr/" target="_blank"><img src="{{ asset('img/logo-ambassade.jpg') }}" height="80" class="pl-3 pr-2" /></a>
+					<a href="https://www.sciencescope.org/" target="_blank"><img src="{{ asset('img/logo-sciencescope.png') }}" height="60" class="pl-2 pr-2" /></a>
+					<a href="https://www.lfitokyo.org/" target="_blank"><img src="{{ asset('img/logo-lfit.png') }}" height="60" class="pl-2 pr-2" /></a>
+					<a href="https://www.aefe.fr/" target="_blank"><img src="{{ asset('img/logo-aefe-zap.png') }}" height="80" class="pl-3 pr-2" /></a>
+					<a href="https://www.aefe.fr/" target="_blank"><img src="{{ asset('img/logo-cnrs.png') }}" height="70" class="pl-3 pr-2" /></a>
+					<a href="https://www.aefe.fr/" target="_blank"><img src="{{ asset('img/logo-ambassade.jpg') }}" height="80" class="pl-3 pr-2" /></a>
 				</div>
 
 				<div class="pt-5">
 					<div class="font-weight-bold" style="color:#E3342F">CALENDRIER</div>
 					<ul>
-						<li><b class="text-monospace text-success">15 novembre</b> : fin des dépôts des propositions de présentations</li>
-						<li><b class="text-monospace">du 15 au 22 novembre</b> : étude des dossiers</li>
-						<li><b class="text-monospace">25 novembre</b> : publication du programme de la JFRL 2024</li>
-						<li><b class="text-monospace text-primary">13 décembre</b> : JFRL 2024</li>
+						<li><b class="text-monospace text-success" style="font-size:90%">15 novembre</b> : fin des dépôts des propositions de présentations</li>
+						<li><b class="text-monospace" style="font-size:90%">du 15 au 22 novembre</b> : étude des dossiers</li>
+						<li><b class="text-monospace" style="font-size:90%">25 novembre</b> : publication du programme de la JFRL 2024</li>
+						<li><b class="text-monospace text-primary" style="font-size:90%">13 décembre</b> : JFRL 2024</li>
 					</ul>
 				</div>
 
