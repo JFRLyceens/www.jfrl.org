@@ -54,7 +54,8 @@
 				<div class="text-right text-secondary text-monospace small mt-3"><b>13 décembre 2024</b></div>	
 				<div class="text-right text-monospace small" style="color:silver">zone asie-pacifique</div>	
 				<div class="text-right mt-4">
-					<a class="btn btn-primary" href="/inscription" role="button" style="width:120px;">inscription</a>
+					Pour assister aux présentations (sur place ou à distance) : <a class="btn btn-primary" href="/auditeur" role="button" style="width:120px;">inscription</a>
+					<!-- <a class="btn btn-primary" href="/inscription" role="button" style="width:120px;">inscription</a> -->
 					<br />
 					<a class="btn btn-sm btn-light mt-3" href="login" role="button" style="width:120px;">se connecter</a>
 				</div>	
