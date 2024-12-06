@@ -259,6 +259,7 @@ if (Auth::user()->is_admin != 1) {
                                 @if (!empty($documents))
                                 <!-- DOCUMENTS -->
                                 <div class="mt-3 font-weight-bold">Documents</div>
+                                {{str_pad($etablissement->id, 3, '0', STR_PAD_LEFT)}}
                                 <div class="list-group text-monospace mt-2 mb-2">
                                     @foreach($documents as $document)
                                         <li class="list-group-item p-1">
