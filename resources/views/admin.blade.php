@@ -255,7 +255,7 @@ if (Auth::user()->is_admin != 1) {
                                         $documents = File::files($directory);
                                     }
                                 @endphp
-                                {{str_pad($etablissement->id, 3, '0', STR_PAD_LEFT)}}
+
                                 @if (!empty($documents))
                                 <!-- DOCUMENTS -->
                                 <div class="mt-3 font-weight-bold">Documents</div>
