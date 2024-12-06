@@ -249,7 +249,7 @@ if (Auth::user()->is_admin != 1) {
                                 {!! nl2br($presentation->intervenants) !!}
 
                                 @php
-                                    $directory = storage_path('app/public/presentations/'.str_pad(Auth::id(), 3, '0', STR_PAD_LEFT).'/'.$presentation->jeton);
+                                    $directory = storage_path('app/public/presentations/'.str_pad($etablissement->id, 3, '0', STR_PAD_LEFT).'/'.$presentation->jeton);
                                     $documents = [];
                                     if (File::exists($directory)) {
                                         $documents = File::files($directory);
