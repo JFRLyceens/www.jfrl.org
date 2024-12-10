@@ -263,7 +263,7 @@ if (Auth::user()->is_admin != 1) {
                                 <div class="list-group text-monospace mt-2 mb-2">
                                     @foreach($documents as $document)
                                         <li class="list-group-item p-1">
-                                            <a class="pl-2 align-middle" href="{{asset('/storage/presentations/'.str_pad(Auth::id(), 3, '0', STR_PAD_LEFT).'/'.$presentation->jeton.'/'.$document->getFilename())}}" download>{{$document->getFilename()}}</a>
+                                            <a class="pl-2 align-middle" href="{{asset('/storage/presentations/'.str_pad($etablissement->id, 3, '0', STR_PAD_LEFT).'/'.$presentation->jeton.'/'.$document->getFilename())}}" download>{{$document->getFilename()}}</a>
                                         </li>
                                     @endforeach
                                 </div>  
