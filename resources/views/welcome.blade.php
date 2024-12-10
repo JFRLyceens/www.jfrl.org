@@ -139,7 +139,7 @@
 					</tr>
 					<tr>
 						<td class="prog_heure">14h50</td>
-						<td class="pb-3">Conférence invitée - 1 - Basptiste Alric</td>
+						<td class="pb-3">Conférence invitée - 1 - Baptiste Alric</td>
 					</tr>
 					<tr>
 						<td class="prog_heure">15h20</td>
@@ -187,7 +187,11 @@
 					</tr>
 					<tr>
 						<td class="prog_heure">17h00</td>
-						<td class="pb-3">Conférence invitée - 2 - Naoko Hosokawa</td>
+						<td class="pb-3">
+							Conférence invitée - 2 - Naoko Hosokawa
+							<br />
+							"Multilinguisme : Diversité linguistique et langue claire."
+						</td>
 					</tr>
 					<tr>
 						<td class="prog_heure">17h30</td>
