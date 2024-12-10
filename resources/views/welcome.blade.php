@@ -76,7 +76,7 @@
 	<div class="container-fluid mb-5">
 		<div class="row">
 			<div class="col-md-6 text-right">
-				<img class="img-fluid" src="{{ asset('img/affiche_jfrl_2024.jpg') }}" width="700" class="pr-2" />
+				<img class="img-fluid" src="{{ asset('img/affiche_jfrl_2024.jpeg') }}" width="700" class="pr-2" />
 			</div>
 			<div class="col-md-6 pr-5 pt-4" style="font-family:'Latin Modern Roman',serif;font-size:20px;text-align:justify;line-height:1;">
 
@@ -190,7 +190,7 @@
 						<td class="pb-3">
 							Conférence invitée - 2 - Naoko Hosokawa
 							<br />
-							"Multilinguisme : Diversité linguistique et langue claire."
+							<small>"Multilinguisme : Diversité linguistique et langue claire"</small>
 						</td>
 					</tr>
 					<tr>
