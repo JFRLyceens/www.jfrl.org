@@ -87,7 +87,7 @@
 					</tr>
 					<tr>
 					<td class="prog_heure">10h30</td>
-						<td class="pb-3">Introduction</td>
+						<td class="pb-3">Mots d'introduction</td>
 					</tr>
 					<tr>
 					<td class="prog_heure">10h45</td>
@@ -99,7 +99,7 @@
 					</tr>
 					<tr>
 						<td class="prog_heure">11h15</td>
-						<td class="pb-3">Visite laboratoire</td>
+						<td class="pb-3">Visite du campus de Hongo et d’un de ces laboratoires</td>
 					</tr>
 					<tr>
 						<td class="prog_heure">12h00</td>
@@ -139,7 +139,11 @@
 					</tr>
 					<tr>
 						<td class="prog_heure">14h50</td>
-						<td class="pb-3">Conférence invitée - 1 - Baptiste Alric</td>
+						<td class="pb-3">
+							Conférence invitée 1 - Baptiste Alric (LIMMS-CNRS/IIS)
+							<br />
+							<small>Explorer la vie sous pression : la biophysique en action</small>
+						</td>
 					</tr>
 					<tr>
 						<td class="prog_heure">15h20</td>
@@ -180,7 +184,7 @@
 					<tr>
 						<td class="prog_heure">16h50</td>
 						<td class="pb-3">
-							Scientific Game Jam Tokyo 2024 - Language defender.
+							Scientific Game Jam Tokyo 2024 - Language defender
 							<br />
 							<small class="text-muted">Lycée Français International de Tokyo. Projet encadré par M. Abbal.</small>
 						</td>
@@ -188,7 +192,7 @@
 					<tr>
 						<td class="prog_heure">17h00</td>
 						<td class="pb-3">
-							Conférence invitée - 2 - Naoko Hosokawa
+							Conférence invitée 2 - Naoko Hosokawa (université de Tokyo)
 							<br />
 							<small>"Multilinguisme : Diversité linguistique et langue claire"</small>
 						</td>
