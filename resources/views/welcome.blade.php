@@ -194,7 +194,7 @@
 						<td class="pb-3">
 							Conférence invitée 2 - Naoko Hosokawa (université de Tokyo)
 							<br />
-							<small>"Multilinguisme : Diversité linguistique et langue claire"</small>
+							<small>Multilinguisme : Diversité linguistique et langue claire</small>
 						</td>
 					</tr>
 					<tr>
