@@ -40,7 +40,7 @@
 					<div class="col-md-12" style="background-color:white;padding:10px 10px 10px 20px;border:2px dashed silver;border-radius:4px;">
 						Pour suivre la JFRL 2024 à distance (lien à ne pas diffuser):
 						<ul class="mb-0">
-							<li><a target="_blank" class="text-monospace" href="https://us02web.zoom.us/j/6612620334?pwd=Q212OS9jZ2hxRkd3dkpRM0dlenM0QT09&omn=83948870705">https://us02web.zoom.us/j/6612620334?pwd=Q212OS9jZ2hxRkd3dkpRM0dlenM0QT09&omn=83948870705</a></li>
+							<li>Lien: <a target="_blank" class="text-monospace" href="https://us02web.zoom.us/j/6612620334?pwd=Q212OS9jZ2hxRkd3dkpRM0dlenM0QT09&omn=83948870705">https://us02web.zoom.us/j/6612620334?pwd=Q212OS9jZ2hxRkd3dkpRM0dlenM0QT09&omn=83948870705</a></li>
 							<li>ID de réunion: 661 262 0334</li>
 							<li>Code secret: 98244yy65</li>
 						</ul>
