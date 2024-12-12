@@ -44,6 +44,7 @@
 							<li>ID de réunion: 661 262 0334</li>
 							<li>Code secret: 98244yy65</li>
 						</ul>
+						Lien à ne pas diffuser.
 					</div>
 				</div>
 
