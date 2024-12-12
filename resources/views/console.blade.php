@@ -29,10 +29,21 @@
 
 			<div class="col-md-11">
 
-				<div class="row mb-5">
+				<div class="row mb-3">
 					<div class="col-md-12">
 						<h1 class="text-center m-0" style="font-size:34px">JFRL 2024</h1>
 						<div class="text-center text-secondary text-monospace small font-weight-bold">Tokyo | 13 décembre 2024</div>
+					</div>
+				</div>
+
+				<div class="row mb-5">
+					<div class="col-md-12" style="background-color:white;padding:10px 10px 10px 20px;border:2px dashed silver;border-radius:4px;">
+						Pour suivre la JFRL 2024 à distance:
+						<ul class="mb-0">
+							<li><a target="_blank" class="text-monospace" href="https://us02web.zoom.us/j/6612620334?pwd=Q212OS9jZ2hxRkd3dkpRM0dlenM0QT09&omn=83948870705">https://us02web.zoom.us/j/6612620334?pwd=Q212OS9jZ2hxRkd3dkpRM0dlenM0QT09&omn=83948870705</a></li>
+							<li>ID de réunion: 661 262 0334</li>
+							<li>Code secret: 98244yy65</li>
+						</ul>
 					</div>
 				</div>
 
