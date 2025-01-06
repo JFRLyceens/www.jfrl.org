@@ -55,7 +55,7 @@
 				<div class="text-right text-monospace small" style="color:silver">zone asie-pacifique</div>	
 				<div class="text-right mt-4">
 					<!-- Pour assister à la JFRL: <a class="btn btn-primary" href="/auditeur" role="button" style="width:120px;">inscription</a> -->
-					<a class="btn btn-primary" href="/register" role="button" style="width:120px;">inscription</a>
+					<a class="btn btn-primary" href="/inscription" role="button" style="width:120px;">inscription</a>
 					<br />
 					<a class="btn btn-sm btn-light mt-3" href="login" role="button" style="width:120px;">se connecter</a>
 				</div>	
@@ -80,13 +80,12 @@
 
 				<div class="pt-1 pb-4 text-center text-monospace">
 					<a class="btn btn-light" href="/presentation_JFRL.pdf" role="button" data-toggle="tooltip" data-placement="top" title="Télécharger la présentation de la JFRL au format PDF." target="_blank"><svg xmlns="http://www.w3.org/2000/svg" height="14" width="14" viewBox="0 0 512 512"><path d="M256 0a256 256 0 1 0 0 512A256 256 0 1 0 256 0zM244.7 395.3l-112-112c-4.6-4.6-5.9-11.5-3.5-17.4s8.3-9.9 14.8-9.9l64 0 0-96c0-17.7 14.3-32 32-32l32 0c17.7 0 32 14.3 32 32l0 96 64 0c6.5 0 12.3 3.9 14.8 9.9s1.1 12.9-3.5 17.4l-112 112c-6.2 6.2-16.4 6.2-22.6 0z"/></svg> PRÉSENTATION DE LA JFRL</a>
-					<a class="btn btn-light" href="/jfrl-2024" role="button">JFRL 2024</a>
 				</div>
 
 				<div class="pt-3 text-center">
 					<a href="https://www.sciencescope.org/" target="_blank"><img src="{{ asset('img/logo-sciencescope.png') }}" height="60" class="pl-2 pr-2" /></a>
 					<a href="https://www.lfitokyo.org/" target="_blank"><img src="{{ asset('img/logo-lfit.png') }}" height="60" class="pl-2 pr-2" /></a>
-					<!--<a href="https://www.aefe.fr/" target="_blank"><img src="{{ asset('img/logo-aefe-zap.png') }}" height="80" class="pl-3 pr-2" /></a>-->
+					<a href="https://www.aefe.fr/" target="_blank"><img src="{{ asset('img/logo-aefe-zap.png') }}" height="80" class="pl-3 pr-2" /></a>
 					<a href="https://www.aefe.fr/" target="_blank"><img src="{{ asset('img/logo-cnrs.png') }}" height="70" class="pl-3 pr-2" /></a>
 					<a href="https://www.aefe.fr/" target="_blank"><img src="{{ asset('img/logo-ambassade.jpg') }}" height="80" class="pl-3 pr-2" /></a>
 				</div>

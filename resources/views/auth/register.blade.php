@@ -15,7 +15,7 @@
 		<div class="row">
 
             <div class="col-md-1 mb-5">
-				<a class="btn btn-light btn-sm" href="/inscription" role="button"><i class="fas fa-arrow-left"></i></a>
+				<a class="btn btn-light btn-sm" href="/" role="button"><i class="fas fa-arrow-left"></i></a>
             </div>
 
 			<div class="col-md-11">

@@ -18,8 +18,8 @@
 
 				<div class="row mb-5">
 					<div class="col-md-12">
-						<h1 class="text-center text-danger font-weight-bold m-0" style="font-size:2.8rem">JFRL 2024</h1>
-						<div class="text-center text-secondary text-monospace small font-weight-bold">Tokyo | 13 décembre 2024</div>
+						<h1 class="text-center text-danger font-weight-bold m-0" style="font-size:2.8rem">JFRL 2025</h1>
+						<div class="text-center text-secondary text-monospace small font-weight-bold">Tokyo | décembre 2025</div>
 						<div class="mt-2 text-center text-monospace small font-weight-bold">~ inscription ~</div>
 					</div>
 				</div>
