@@ -31,12 +31,11 @@
 
 				<div class="row mb-3">
 					<div class="col-md-12">
-						<h1 class="text-center m-0" style="font-size:34px">JFRL 2025</h1>
-						<div class="text-center text-secondary text-monospace small font-weight-bold">Tokyo | décembre 2025</div>
+						<h1 class="text-center m-0" style="font-size:34px">JFRL 2024</h1>
+						<div class="text-center text-secondary text-monospace small font-weight-bold">Tokyo | 13 décembre 2024</div>
 					</div>
 				</div>
 
-				<!--
 				<div class="row mb-5">
 					<div class="col-md-12" style="background-color:white;padding:10px 10px 10px 20px;border:2px dashed silver;border-radius:4px;">
 						Pour suivre la JFRL 2024 à distance (lien à ne pas diffuser):
@@ -49,7 +48,6 @@
 						Programme: <a target="_blank" class="text-monospace" href="https://www.jfrl.org">www.jfrl.org</a> 
 					</div>
 				</div>
-						-->
 
 				<?php
 				$presentations = App\Models\Presentation::where('user_id', Auth::id())->get();
@@ -105,10 +103,10 @@
                     <div class="col-md-10 offset-md-1">
 					CALENDRIER
 					<ul>
-						<li><b class="text-monospace text-success">début novembre 2025</b> : fin des dépôts des propositions de présentations</li>
-						<li><b class="text-monospace">début novembre ~ mi-novembre 2025</b> : étude des dossiers</li>
-						<li><b class="text-monospace">mi-novembre 2025</b> : publication du programme de la JFRL 2025</li>
-						<li><b class="text-monospace text-primary">décembre 2025</b> : JFRL 2025</li>
+						<li><b class="text-monospace text-success">15 novembre</b> : fin des dépôts des propositions de présentations</li>
+						<li><b class="text-monospace">du 15 au 22 novembre</b> : étude des dossiers</li>
+						<li><b class="text-monospace">25 novembre</b> : publication du programme de la JFRL 2024</li>
+						<li><b class="text-monospace text-primary">13 décembre</b> : JFRL 2024</li>
 					</ul>
 				</div>
 				</div>
