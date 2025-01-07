@@ -67,14 +67,14 @@
 
 		<div class="row mt-4">
 			<div class="col-md-10 offset-md-1" style="font-family: 'Latin Modern Roman', serif;font-size:20px;text-align:justify;">
-				<p>Depuis 2017, le <a href="https://www.lfitokyo.org/" target="_blank">Lycée Français International de Tokyo</a> participe à la <a href="https://www.sciencescope.org/events-2/jfr/jfr2023/" target="_blank">Journée Francophone de la Recherche (JFR)</a> organisée depuis bientôt trois décennies par <a href="https://www.sciencescope.org/" target="_blank">Sciencescope</a>, l'association des étudiants et chercheurs francophones au Japon, avec le soutien de l'<a href="https://jp.ambafrance.org/" target="_blank">Ambassade de France au Japon</a>, du <a href="https://tokyo.cnrs.fr/" target="_blank">CNRS</a> et de l'<a href="https://www.mfj.gr.jp/" target="_blank">Institut Français de Recherches sur le Japon - Maison Franco-Japonaise (IFRJ-MFJ)</a>. L'expérience de ces dernières années ayant été concluante, il a été décidé d'organiser, avec le soutien de l'<a href="https://www.aefe.fr/" target="_blank">AEFE</a>, une Journée Francophone de la Recherche des Lycéen(ne)s, ouverte à tous les lycées français de la zone Asie-Pacifique, le 13 décembre 2024. Cette première édition aura lieu à Tokyo.</p>
+				De 2017 à 2023, le <a href="https://www.lfitokyo.org/" target="_blank">Lycée Français International de Tokyo</a> a participé à la <a href="https://www.sciencescope.org/events-2/jfr/jfr2023/" target="_blank">Journée Francophone de la Recherche (JFR)</a> organisée depuis trois décennies par <a href="https://www.sciencescope.org/" target="_blank">Sciencescope</a>, l'association des étudiants et chercheurs francophones au Japon, avec le soutien de l'<a href="https://jp.ambafrance.org/" target="_blank">Ambassade de France au Japon</a>, du <a href="https://tokyo.cnrs.fr/" target="_blank">CNRS</a> et de l'<a href="https://www.mfj.gr.jp/" target="_blank">Institut Français de Recherches sur le Japon - Maison Franco-Japonaise (IFRJ-MFJ)</a>.<br />
+				L'expérience de ces années de participation ayant été concluante, il a été décidé d'organiser une Journée Francophone de la Recherche des Lycéen(ne)s, ouverte à tous les lycées français de la zone Asie-Pacifique afin d'offrir aux élèves de ces établissements l'opportunité de présenter des projets de recherche qu'ils ont menés avec leurs enseignants dans le cadre de leurs cours de lycée.<br />
+				La <a href="/jfrl-2024">première édition</a> de la JFRL a eu lieu le vendredi 13 décembre 2024 sur le <a href="https://maps.app.goo.gl/fyZkkg28wuNpWf3F9" target="_blank">campus historique</a> de l'université de Tokyo. La deuxième édition est programmée pour décembre 2025 et se déroulera au même endroit.
 			</div>
 		</div>
 	</div>
 
-
-
-	<div class="container mt-4 mb-5">
+	<div class="container mt-5 mb-5">
 		<div class="row mt-4">
 			<div class="col-md-10 offset-md-1" style="font-family: 'Latin Modern Roman', serif;font-size:20px;text-align:justify;">			
 
