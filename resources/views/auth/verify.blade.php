@@ -43,7 +43,7 @@
 							Si vous avez reçu le courriel de vérification, que vous avez cliqué sur le lien mais que vous arrivez tout de même sur cette page, <a href="/direct-login" class="button text-center">cliquez ici</a> pour vous connecter.
 							</li>
 							<li class="mt-3">
-							Si un problème persiste et vous empêche de vous connecter, vous pouvez écrire à <a href="mailto:contact@nuitducode.net">contact@nuitducode.net</a>.
+							Si un problème persiste et vous empêche de vous connecter, vous pouvez écrire à <a href="mailto:contact@jfrl.org">contact@jfrl.org</a>.
 							</li>
 						</ul>
 					</div>
