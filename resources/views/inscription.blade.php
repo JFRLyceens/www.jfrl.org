@@ -30,7 +30,7 @@
                         <div class="mt-1 text-monospace small text-justify">pour assister à la JFRL, sur place ou en visioconférence</div>
 					</div>
                     <div class="col-md-3">
-                        <a class="btn btn-primary btn-lg d-block" href="/register" role="button">compte enseignant</a>
+                        <a class="btn btn-primary btn-lg d-block" href="/inscription_enseignant" role="button">compte enseignant</a>
                         <div class="mt-1 text-monospace small text-justify">pour inscrire des élèves comme intervenants ou auditeurs (en présentiel ou en distanciel).</div>
 				    </div>
                 </div>
