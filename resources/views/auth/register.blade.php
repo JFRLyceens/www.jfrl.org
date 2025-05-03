@@ -186,6 +186,8 @@
 								</div>
 							</div>
 
+							<input type="hidden" name="loaded_at" value="{{ now() }}">
+
 							<div class="form-group row pt-2">
 								<div class="col-md-8 offset-md-3">
 									<button type="submit" id="inscription" class="btn btn-dark" disabled>envoyer</button>
